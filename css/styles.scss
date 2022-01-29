@@ -9,10 +9,10 @@
 }
 #grid-container {
 	display: grid;
-	grid-template-rows: 30px 180px 150px 1450px 100px;
+	grid-template-rows: 4.5rem 10rem 9rem 93rem 8rem;
 	grid-template-areas: "header" "carrousel" "horarios" "contenido" "footer";
 }
-header {
+.header {
 	grid-area: header;
 }
 .lachoppera {
@@ -24,22 +24,25 @@ header {
 		letter-spacing: 1px;
 	}
 	.nave {
+		display: flex;
 		.navegacion {
 			font-size: 20px;
 			color: black;
 			text-align: right;
+			&:hover{
+				color:orangered;
+				text-decoration: overline;
+			}
 		}
 		.solo {
 			font-size: 20px;
 			color: black;
 			text-align: right;
+			&:hover{
+				color:orangered;
+				text-decoration: overline;
+			}
 		}
-	}
-}
-a {
-	&:hover {
-		color: orangered;
-		text-decoration: overline;
 	}
 }
 .carousel {
@@ -49,11 +52,10 @@ a {
 }
 body {
 	background-color: rgb(15, 14, 12);
-	padding-top: 3rem;
-	padding-bottom: 3rem;
 	color: #a8a8a8;
 }
 #horarios {
+	grid-area: horarios;
 	.titulo {
 		padding: 3px;
 		text-align: center;
@@ -368,7 +370,7 @@ footer {
 /* RESPONSIVE CSS */
 @media (min-width: 728px) {
 	#grid-container {
-		grid-template-rows: 30px 430px 150px 1050px 90px;
+		grid-template-rows: 6.5rem 25rem 13rem 63rem 5rem;
 	}
 	/* index-navegacion */
 	.lachoppera {
@@ -376,15 +378,12 @@ footer {
 			font-size: 45px;
 		}
 		.nave {
+			justify-content: flex-end;
 			.navegacion {
 				font-size: 27px;
-				margin-right: 0.7rem;
-				padding-right: 0px;
 			}
 			.solo {
 				font-size: 27px;
-				margin-right: 0.7rem;
-				padding-right: 0px;
 			}
 		}
 	}
@@ -609,9 +608,9 @@ footer {
 		}
 	}
 }
-@media (min-width: 1024px) {
+@media (min-width: 1440px) {
 	#grid-container {
-		grid-template-rows: 30px 500px 250px 1150px 100px;
+		grid-template-rows: 6rem 43rem 17rem 71rem 6rem;
 	}
 	/* index-navegacion */
 	.lachoppera {

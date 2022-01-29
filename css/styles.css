@@ -12,12 +12,12 @@
 #grid-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 30px 180px 150px 1450px 100px;
-      grid-template-rows: 30px 180px 150px 1450px 100px;
+  -ms-grid-rows: 4.5rem 10rem 9rem 93rem 8rem;
+      grid-template-rows: 4.5rem 10rem 9rem 93rem 8rem;
       grid-template-areas: "header" "carrousel" "horarios" "contenido" "footer";
 }
 
-header {
+.header {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: header;
@@ -34,10 +34,21 @@ header {
   letter-spacing: 1px;
 }
 
+.lachoppera .nave {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .lachoppera .nave .navegacion {
   font-size: 20px;
   color: black;
   text-align: right;
+}
+
+.lachoppera .nave .navegacion:hover {
+  color: orangered;
+  text-decoration: overline;
 }
 
 .lachoppera .nave .solo {
@@ -46,7 +57,7 @@ header {
   text-align: right;
 }
 
-a:hover {
+.lachoppera .nave .solo:hover {
   color: orangered;
   text-decoration: overline;
 }
@@ -61,9 +72,13 @@ a:hover {
 
 body {
   background-color: #0f0e0c;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
   color: #a8a8a8;
+}
+
+#horarios {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: horarios;
 }
 
 #horarios .titulo {
@@ -469,22 +484,23 @@ footer img {
 /* RESPONSIVE CSS */
 @media (min-width: 728px) {
   #grid-container {
-    -ms-grid-rows: 30px 430px 150px 1050px 90px;
-        grid-template-rows: 30px 430px 150px 1050px 90px;
+    -ms-grid-rows: 6.5rem 25rem 13rem 63rem 5rem;
+        grid-template-rows: 6.5rem 25rem 13rem 63rem 5rem;
   }
   /* index-navegacion */
   .lachoppera .lacho {
     font-size: 45px;
   }
+  .lachoppera .nave {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
   .lachoppera .nave .navegacion {
     font-size: 27px;
-    margin-right: 0.7rem;
-    padding-right: 0px;
   }
   .lachoppera .nave .solo {
     font-size: 27px;
-    margin-right: 0.7rem;
-    padding-right: 0px;
   }
   .navbar-light .navbar-nav .nav-link.active {
     color: black;
@@ -700,10 +716,10 @@ footer img {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1440px) {
   #grid-container {
-    -ms-grid-rows: 30px 500px 250px 1150px 100px;
-        grid-template-rows: 30px 500px 250px 1150px 100px;
+    -ms-grid-rows: 6rem 43rem 17rem 71rem 6rem;
+        grid-template-rows: 6rem 43rem 17rem 71rem 6rem;
   }
   /* index-navegacion */
   .lachoppera .lacho {
