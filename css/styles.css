@@ -12,8 +12,8 @@
 #grid-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 4.5rem 10rem 9rem 93rem 8rem;
-      grid-template-rows: 4.5rem 10rem 9rem 93rem 8rem;
+  -ms-grid-rows: 4.5rem 10rem 9rem 92.5rem 7rem;
+      grid-template-rows: 4.5rem 10rem 9rem 92.5rem 7rem;
       grid-template-areas: "header" "carrousel" "horarios" "contenido" "footer";
 }
 
@@ -122,16 +122,29 @@ body {
   font-weight: 300;
   line-height: 1;
   letter-spacing: -.05rem;
+  text-align: center;
+}
+
+.lead {
+  text-align: center;
 }
 
 .lugar img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 300px;
   height: auto;
+  margin: auto;
 }
 
 .lugares img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 300px;
   height: auto;
+  margin: auto;
 }
 
 footer {
@@ -144,7 +157,7 @@ footer {
 footer img {
   width: 60px;
   height: auto;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
 }
 
 /* pag sucursales */
@@ -482,6 +495,20 @@ footer img {
 }
 
 /* RESPONSIVE CSS */
+@media (min-width: 375px) {
+  #grid-container {
+    -ms-grid-rows: 4.5rem 10rem 9rem 88.5rem 6rem;
+        grid-template-rows: 4.5rem 10rem 9rem 88.5rem 6rem;
+  }
+}
+
+@media (min-width: 425px) {
+  #grid-container {
+    -ms-grid-rows: 4.5rem 10rem 9rem 90rem 6rem;
+        grid-template-rows: 4.5rem 10rem 9rem 90rem 6rem;
+  }
+}
+
 @media (min-width: 728px) {
   #grid-container {
     -ms-grid-rows: 6.5rem 25rem 13rem 63rem 5rem;
@@ -525,6 +552,10 @@ footer img {
   }
   .featurette-heading {
     font-size: 50px;
+    text-align: left;
+  }
+  .lead {
+    text-align: left;
   }
   .lugar img {
     width: 290px;
