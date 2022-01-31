@@ -161,45 +161,28 @@ footer img {
 }
 
 /* pag sucursales */
+#locales .ubication img {
+  margin-top: -4rem;
+  width: 4rem;
+  height: auto;
+}
+
 #locales h1 {
-  font-size: 27px;
+  font-size: 37px;
   text-align: center;
-  text-decoration: underline;
-  margin-top: 0px;
+  margin-top: -10px;
+  margin-bottom: -55px;
 }
 
-#locales p {
-  text-align: center;
-  font-size: 20px;
-  padding: 15px;
-  margin-bottom: 5px;
+.sucursales .sucursalesCard {
+  border: 1px solid #a8a8a8;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  margin: 0px;
 }
 
-#locales div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-#locales img {
-  height: 150px;
-  width: 230px;
-  margin: 4px;
-}
-
-#ubicaciones div {
+.sucursales .sucursales__items1 {
+  min-height: 196px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -207,26 +190,64 @@ footer img {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-top: 20px;
-  background-image: -webkit-gradient(linear, right top, left top, from(#dbca34), to(#0f0e0c));
-  background-image: linear-gradient(to left, #dbca34, #0f0e0c);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: url(../img/tipos.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
 }
 
-#ubicaciones iframe {
-  margin: 5px;
-  width: 132px;
-  height: 99px;
-  border: 2.5px dashed #0f0e0c;
+.sucursales .sucursales__items1 .sitio {
+  font-size: 35px;
+  font-weight: 1500;
 }
 
+.sucursales .sucursales__items1 .sitio .ubicaciones {
+  min-height: 196px;
+}
+
+/* #locales { 
+	p {
+		text-align: center;
+		font-size: 20px;
+		padding: 15px;
+		margin-bottom: 5px;
+	}
+	div {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	img {
+		height: 150px;
+		width: 230px;
+		margin: 4px;
+	}
+}
+#ubicaciones {
+	div {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-top: 20px;
+		background-image: linear-gradient(to left, #dbca34, rgb(15, 14, 12));
+	}
+	iframe {
+		margin: 5px;
+		width: 132px;
+		height: 99px;
+		border: 2.5px dashed rgb(15, 14, 12);
+	}
+} */
 /* pag menu */
 .card {
   text-align: center;
@@ -497,37 +518,36 @@ footer img {
 /* RESPONSIVE CSS */
 @media (min-width: 375px) {
   #grid-container {
-    -ms-grid-rows: 4.5rem 10rem 9rem 88.5rem 6rem;
-        grid-template-rows: 4.5rem 10rem 9rem 88.5rem 6rem;
+    -ms-grid-rows: 4.5rem 12rem 9rem 86.5rem 6rem;
+        grid-template-rows: 4.5rem 12rem 9rem 86.5rem 6rem;
   }
 }
 
 @media (min-width: 425px) {
   #grid-container {
-    -ms-grid-rows: 4.5rem 10rem 9rem 90rem 6rem;
-        grid-template-rows: 4.5rem 10rem 9rem 90rem 6rem;
+    -ms-grid-rows: 4.5rem 13rem 9rem 87rem 6rem;
+        grid-template-rows: 4.5rem 13rem 9rem 87rem 6rem;
   }
 }
 
 @media (min-width: 728px) {
   #grid-container {
-    -ms-grid-rows: 6.5rem 25rem 13rem 63rem 5rem;
-        grid-template-rows: 6.5rem 25rem 13rem 63rem 5rem;
+    -ms-grid-rows: 6rem 25rem 13rem 63rem 5rem;
+        grid-template-rows: 6rem 25rem 13rem 63rem 5rem;
   }
   /* index-navegacion */
   .lachoppera .lacho {
     font-size: 45px;
   }
   .lachoppera .nave {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-  }
-  .lachoppera .nave .navegacion {
-    font-size: 27px;
+    text-align: right;
+    margin: auto;
   }
   .lachoppera .nave .solo {
-    font-size: 27px;
+    font-size: 26px;
+  }
+  .lachoppera .nave .navegacion {
+    font-size: 26px;
   }
   .navbar-light .navbar-nav .nav-link.active {
     color: black;
@@ -556,6 +576,7 @@ footer img {
   }
   .lead {
     text-align: left;
+    font-size: 1.25rem;
   }
   .lugar img {
     width: 290px;
@@ -567,33 +588,51 @@ footer img {
     height: 270px;
     padding-right: 30px;
   }
-  footer img {
+  footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-left: 40px;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    text-align: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    grid-area: footer;
+  }
+  footer img {
+    margin-left: -157px;
+    margin-top: 13px;
   }
   footer p {
-    margin-top: -60px;
+    margin-top: -39px;
   }
   /* sucursales-pag */
+  /* 	h1 {
+			font-size: 27px;
+			text-align: center;
+			margin-top: -10px;
+		} */
+  #locales .ubication img {
+    margin-top: -3rem;
+    width: 7rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   #locales h1 {
-    font-size: 49px;
+    font-size: 47px;
+    margin-top: -59px;
     margin-bottom: 15px;
   }
   #locales p {
     font-size: 35px;
   }
   #locales div {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
     gap: 61px;
   }
   #locales img {
@@ -747,17 +786,59 @@ footer img {
   }
 }
 
+@media (min-width: 1024px) {
+  #grid-container {
+    -ms-grid-rows: 6rem 32rem 13rem 63rem 6rem;
+        grid-template-rows: 6rem 32rem 13rem 63rem 6rem;
+  }
+  .lachoppera .lacho {
+    font-size: 55px;
+  }
+  .lachoppera .nave {
+    padding-left: 10rem;
+  }
+  .lachoppera .nave .solo {
+    font-size: 30px;
+  }
+  .lachoppera .nave .navegacion {
+    font-size: 30px;
+  }
+  /* horarios */
+  #horarios .titulo {
+    font-size: 49px;
+    margin: 20px;
+  }
+  #horarios .titulos {
+    font-size: 33px;
+  }
+  #horarios td {
+    font-size: 23px;
+  }
+  .lead {
+    font-size: 1.7rem;
+  }
+  footer img {
+    margin-left: -277px;
+  }
+}
+
 @media (min-width: 1440px) {
   #grid-container {
-    -ms-grid-rows: 6rem 43rem 17rem 71rem 6rem;
-        grid-template-rows: 6rem 43rem 17rem 71rem 6rem;
+    -ms-grid-rows: 6rem 43rem 17rem 76rem 6rem;
+        grid-template-rows: 6rem 43rem 17rem 76rem 6rem;
   }
   /* index-navegacion */
   .lachoppera .lacho {
-    font-size: 45px;
+    font-size: 65px;
   }
-  .nave {
-    padding-left: 33rem;
+  .lachoppera .nave {
+    padding-left: 20rem;
+  }
+  .lachoppera .nave .solo {
+    font-size: 37px;
+  }
+  .lachoppera .nave .navegacion {
+    font-size: 37px;
   }
   /* horarios */
   #horarios .titulo {
@@ -765,30 +846,38 @@ footer img {
     margin: 30px;
   }
   #horarios .titulos {
-    font-size: 33px;
+    font-size: 43px;
   }
   #horarios td {
-    font-size: 25px;
+    font-size: 31px;
     padding: 10px 20px;
     text-align: center;
   }
   .featurette-heading {
     margin-top: 4.5rem;
   }
+  .lead {
+    font-size: 2rem;
+  }
   .lugar img {
-    width: 491px;
+    width: 500px;
     height: 307px;
   }
   .lugares img {
-    width: 491px;
+    width: 500px;
     height: 307px;
   }
   footer img {
     width: 80px;
+    margin-left: -440px;
   }
   /* sucursales-pag */
+  #locales .ubication img {
+    margin-top: -2rem;
+    width: 9rem;
+  }
   #locales h1 {
-    font-size: 57px;
+    font-size: 59px;
   }
   #locales img {
     height: 168px;

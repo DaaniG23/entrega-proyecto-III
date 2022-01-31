@@ -123,12 +123,45 @@ footer {
 }
 /* pag sucursales */
 #locales {
-	h1 {
-		font-size: 27px;
-		text-align: center;
-		text-decoration: underline;
-		margin-top: 0px;
+	.ubication img{
+		margin-top: -4rem;
+		width: 4rem;
+		height: auto;
 	}
+	h1 {
+		font-size: 37px;
+		text-align: center;
+		margin-top: -10px;
+		margin-bottom: -55px;
+	}
+}
+.sucursales{
+	.sucursalesCard{
+			border: 1px solid #a8a8a8;
+			border-radius: 0.25rem;
+			overflow: hidden;
+			margin: 0px;
+	}
+		.sucursales__items1 {
+			min-height: 196px;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			background: url(../img/tipos.jpg) no-repeat;
+			background-size: cover;
+			background-position: center;
+			color:white;
+		.sitio {
+			font-size: 35px;
+			font-weight: 1500;
+		.ubicaciones {
+			min-height: 196px;
+			}
+		}
+	}
+}
+/* #locales { 
 	p {
 		text-align: center;
 		font-size: 20px;
@@ -164,7 +197,7 @@ footer {
 		height: 99px;
 		border: 2.5px dashed rgb(15, 14, 12);
 	}
-}
+} */
 /* pag menu */
 .card {
 	text-align: center;
@@ -379,17 +412,17 @@ footer {
 /* RESPONSIVE CSS */
 @media (min-width: 375px) {
 #grid-container {
-	grid-template-rows: 4.5rem 10rem 9rem 88.5rem 6rem;
+	grid-template-rows: 4.5rem 12rem 9rem 86.5rem 6rem;
 	}
 }
 @media (min-width: 425px) {
 	#grid-container {
-		grid-template-rows: 4.5rem 10rem 9rem 90rem 6rem;
+		grid-template-rows: 4.5rem 13rem 9rem 87rem 6rem;
 	}
 }
 @media (min-width: 728px) {
 	#grid-container {
-		grid-template-rows: 6.5rem 25rem 13rem 63rem 5rem;
+		grid-template-rows: 6rem 25rem 13rem 63rem 5rem;
 	}
 	/* index-navegacion */
 	.lachoppera {
@@ -397,13 +430,14 @@ footer {
 			font-size: 45px;
 		}
 		.nave {
-			justify-content: flex-end;
-			.navegacion {
-				font-size: 27px;
-			}
+			text-align: right;
+			margin: auto;
 			.solo {
-				font-size: 27px;
-			}
+				font-size: 26px;
+				}
+			.navegacion {
+				font-size: 26px;
+				}
 		}
 	}
 	.navbar-light {
@@ -439,6 +473,7 @@ footer {
 	}
 	.lead{
 		text-align: left;
+		font-size: 1.25rem;
 	}
 	.lugar {
 		img {
@@ -455,27 +490,40 @@ footer {
 		}
 	}
 	footer {
+		display: flex; 
+		align-items: flex-end; 
+		text-align: center; 
+		justify-content: space-evenly; 
+		grid-area: footer;
 		img {
-			display: flex;
-			justify-content: space-around;
-			align-items: center;
-			margin-left: 40px;
+			margin-left: -157px;
+			margin-top: 13px;
 		}
 		p {
-			margin-top: -60px;
+			margin-top: -39px;
 		}
 	}
 	/* sucursales-pag */
+	/* 	h1 {
+			font-size: 27px;
+			text-align: center;
+			margin-top: -10px;
+		} */
 	#locales {
+		.ubication img{
+			margin-top: -3rem;
+			width: 7rem;
+			flex-direction: column;
+		}
 		h1 {
-			font-size: 49px;
+			font-size: 47px;
+			margin-top: -59px;
 			margin-bottom: 15px;
 		}
 		p {
 			font-size: 35px;
 		}
 		div {
-			flex-direction: row;
 			gap: 61px;
 		}
 		img {
@@ -631,18 +679,64 @@ footer {
 		}
 	}
 }
+@media (min-width: 1024px) {
+	#grid-container {
+		grid-template-rows: 6rem 32rem 13rem 63rem 6rem;
+	}
+	.lachoppera {
+		.lacho {
+			font-size: 55px;
+		}
+		.nave {
+			padding-left: 10rem;
+			.solo {
+				font-size: 30px;
+			}
+			.navegacion {
+			font-size: 30px;
+			}
+		}
+	}
+	/* horarios */
+	#horarios {
+		.titulo {
+			font-size: 49px;
+			margin: 20px;
+		}
+		.titulos {
+			font-size: 33px;
+		}
+		td {
+			font-size: 23px;
+			}
+	}
+	.lead{
+		font-size: 1.7rem;
+	}
+	footer{
+		img{
+			margin-left: -277px;
+		}
+	}
+}
 @media (min-width: 1440px) {
 	#grid-container {
-		grid-template-rows: 6rem 43rem 17rem 71rem 6rem;
+		grid-template-rows: 6rem 43rem 17rem 76rem 6rem;
 	}
 	/* index-navegacion */
 	.lachoppera {
 		.lacho {
-			font-size: 45px;
+			font-size: 65px;
 		}
-	}
-	.nave {
-		padding-left: 33rem;
+		.nave {
+			padding-left: 20rem;
+			.solo {
+				font-size: 37px;
+			}
+			.navegacion {
+			font-size: 37px;
+			}
+		}
 	}
 	/* horarios */
 	#horarios {
@@ -651,10 +745,10 @@ footer {
 			margin: 30px;
 		}
 		.titulos {
-			font-size: 33px;
+			font-size: 43px;
 		}
 		td {
-			font-size: 25px;
+			font-size: 31px;
 			padding: 10px 20px;
 			text-align: center;
 		}
@@ -662,27 +756,35 @@ footer {
 	.featurette-heading {
 		margin-top: 4.5rem;
 	}
+	.lead{
+		font-size: 2rem;
+	}
 	.lugar {
 		img {
-			width: 491px;
+			width: 500px;
 			height: 307px;
 		}
 	}
 	.lugares {
 		img {
-			width: 491px;
+			width: 500px;
 			height: 307px;
 		}
 	}
 	footer {
 		img {
 			width: 80px;
+			margin-left: -440px;
 		}
 	}
 	/* sucursales-pag */
 	#locales {
+		.ubication img{
+			margin-top: -2rem;
+			width: 9rem;
+		}
 		h1 {
-			font-size: 57px;
+			font-size: 59px;
 		}
 		img {
 			height: 168px;
