@@ -176,12 +176,32 @@ footer img {
 
 .sucursales .sucursalesCard {
   border: 1px solid #a8a8a8;
-  border-radius: 0.25rem;
+  border-radius: 100px 15px 100px;
   overflow: hidden;
   margin: 0px;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
-.sucursales .sucursales__items1 {
+.sucursales .sucursalesCard::before {
+  position: absolute;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.sucursales .sucursalesCard::after {
+  position: absolute;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.sucursales .sucursalesCard:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.sucursales .sucursalesCard .sucursales__items1 {
+  background: url(../img/tipos.jpg) no-repeat;
   min-height: 196px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -196,58 +216,97 @@ footer img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: url(../img/tipos.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   color: white;
 }
 
-.sucursales .sucursales__items1 .sitio {
+.sucursales .sucursalesCard:hover {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.sucursales .sucursalesCard .sucursales__items2 {
+  background: url(../img/palermo.jpg) no-repeat;
+  min-height: 196px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.sucursales .sucursalesCard .sucursales__items3 {
+  background: url(../img/puertomadero.jpg) no-repeat;
+  min-height: 196px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.sucursales .sucursalesCard .sitio {
   font-size: 35px;
   font-weight: 1500;
 }
 
-.sucursales .sucursales__items1 .sitio .ubicaciones {
-  min-height: 196px;
+.sucursales .sucursalesCard .direccion {
+  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
 }
 
-/* #locales { 
-	p {
-		text-align: center;
-		font-size: 20px;
-		padding: 15px;
-		margin-bottom: 5px;
-	}
-	div {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		flex-wrap: wrap;
-	}
-	img {
-		height: 150px;
-		width: 230px;
-		margin: 4px;
-	}
+.sucursales .sucursalesCard .direccion h2 {
+  text-align: center;
 }
-#ubicaciones {
-	div {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
-		flex-wrap: wrap;
-		margin-top: 20px;
-		background-image: linear-gradient(to left, #dbca34, rgb(15, 14, 12));
-	}
-	iframe {
-		margin: 5px;
-		width: 132px;
-		height: 99px;
-		border: 2.5px dashed rgb(15, 14, 12);
-	}
-} */
+
+#ubicaciones div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: -37px;
+}
+
+#ubicaciones iframe {
+  margin: 5px;
+  width: 90px;
+  height: 85px;
+}
+
 /* pag menu */
 .card {
   text-align: center;
@@ -521,6 +580,18 @@ footer img {
     -ms-grid-rows: 4.5rem 12rem 9rem 86.5rem 6rem;
         grid-template-rows: 4.5rem 12rem 9rem 86.5rem 6rem;
   }
+  .sucursales .sucursalesCard .direccion {
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  #ubicaciones div {
+    margin-top: -36px;
+    margin-bottom: -7px;
+  }
+  #ubicaciones iframe {
+    width: 108px;
+    height: 92px;
+  }
 }
 
 @media (min-width: 425px) {
@@ -611,46 +682,26 @@ footer img {
     margin-top: -39px;
   }
   /* sucursales-pag */
-  /* 	h1 {
-			font-size: 27px;
-			text-align: center;
-			margin-top: -10px;
-		} */
   #locales .ubication img {
-    margin-top: -3rem;
-    width: 7rem;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    width: 6rem;
   }
   #locales h1 {
     font-size: 47px;
-    margin-top: -59px;
-    margin-bottom: 15px;
   }
-  #locales p {
-    font-size: 35px;
+  .sucursales .sucursalesCard .sucursales__items1, .sucursales .sucursalesCard .sucursales__items2, .sucursales .sucursalesCard .sucursales__items3 {
+    min-height: 225px;
   }
-  #locales div {
-    gap: 61px;
+  .sucursales .sucursalesCard .direccion {
+    text-align: left;
+    margin-top: 3.5rem;
   }
-  #locales img {
-    height: 146px;
-    width: 279px;
-  }
-  #ubicaciones h2 {
-    font-size: 30px;
-    margin-bottom: 10px;
-  }
-  #ubicaciones h4 {
-    font-size: 20px;
-    margin-bottom: 10px;
+  #ubicaciones div {
+    margin-top: -24px;
+    margin-bottom: 14px;
   }
   #ubicaciones iframe {
-    margin: 10px;
-    width: 231px;
-    height: 131px;
+    width: 183px;
+    height: 123px;
   }
   /* menu-pag */
   .card {
@@ -873,24 +924,24 @@ footer img {
   }
   /* sucursales-pag */
   #locales .ubication img {
-    margin-top: -2rem;
-    width: 9rem;
+    width: 10rem;
   }
   #locales h1 {
-    font-size: 59px;
+    font-size: 60px;
   }
-  #locales img {
-    height: 168px;
-    width: 375px;
+  .sucursales .sucursalesCard .sitio {
+    font-size: 55px;
   }
-  #locales div {
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+  .sucursales .sucursalesCard .sucursales__items1, .sucursales .sucursalesCard .sucursales__items2, .sucursales .sucursalesCard .sucursales__items3 {
+    min-height: 268px;
   }
-  #ubicaciones h3 {
-    font-size: 25px;
-    margin-right: 30px;
+  .sucursales .sucursalesCard .direccion {
+    margin-top: 3.5rem;
+    font-size: 40px;
+  }
+  #ubicaciones iframe {
+    width: 420px;
+    height: 206px;
   }
   /* menu-pag */
   #fondomenu img {
