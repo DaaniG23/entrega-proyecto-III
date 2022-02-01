@@ -381,11 +381,11 @@ footer {
 }
 .botones {
 	button {
-		width: 90px;
+		width: 200px;
 		height: 39px;
 		padding-left: 13px;
 		margin-bottom: 12px;
-		margin-left: 7px;
+		margin-left: 5px;
 		margin-top: 39px;
 	}
 }
@@ -402,10 +402,10 @@ footer {
 }
 .final {
 	img {
-		width: 300px;
+		width: 304px;
 		display: flex;
 		margin: auto;
-		margin-bottom: 40px;
+		margin-bottom: 72px;
 	}
 }
 /* RESPONSIVE CSS */
@@ -413,6 +413,7 @@ footer {
 	#grid-container {
 		grid-template-rows: 4.5rem 12rem 9rem 86.5rem 6rem;
 	}
+	/* pag-sucursales */
 	.sucursales .sucursalesCard .direccion {
 		margin-bottom: 1.5rem;
 		margin-top: 1.5rem;
@@ -426,6 +427,25 @@ footer {
 			width: 108px;
 			height: 92px;
 		}
+	}
+	/* pag-menu */
+	.imagenesmenu {
+		img {
+			width: 257px;
+			height: 141px;
+			margin-bottom: 20px;
+			margin-top: -8px;
+		}
+	}
+	/* pag-bebidas */
+	#imagenbebida img{
+			height: 84px;
+			width: 164px;
+			margin: 7px;
+	}
+	/* pag-contacto */
+	.final img{
+			margin-bottom: 32px;
 	}
 }
 @media (min-width: 425px) {
@@ -664,7 +684,7 @@ footer {
 	}
 	.botones {
 		button {
-			width: 114px;
+			width: 290px;
 			height: 40px;
 			padding-left: 14px;
 			margin-top: 17px;
@@ -673,22 +693,22 @@ footer {
 	}
 	.final {
 		img {
-			width: 217px;
-			margin-bottom: 21px;
+			width: 113px;
+			margin-bottom: 11px;
 			margin-top: 0px;
 		}
 	}
 }
 @media (min-width: 1024px) {
 	#grid-container {
-		grid-template-rows: 6rem 32rem 13rem 63rem 6rem;
+		grid-template-rows: 6rem 32rem 13rem 72rem 6rem;
 	}
 	.lachoppera {
 		.lacho {
 			font-size: 55px;
 		}
 		.nave {
-			padding-left: 10rem;
+			padding-left: 27rem;
 			.solo {
 				font-size: 30px;
 			}
@@ -718,120 +738,40 @@ footer {
 			margin-left: -277px;
 		}
 	}
-}
-@media (min-width: 1440px) {
-	#grid-container {
-		grid-template-rows: 6rem 43rem 17rem 76rem 6rem;
-	}
-	/* index-navegacion */
-	.lachoppera {
-		.lacho {
-			font-size: 65px;
-		}
-		.nave {
-			padding-left: 20rem;
-			.solo {
-				font-size: 37px;
+		/* sucursales-pag */
+		#locales {
+			.ubication img{
+				width: 10rem;
 			}
-			.navegacion {
-			font-size: 37px;
-			}
-		}
-	}
-	/* horarios */
-	#horarios {
-		.titulo {
-			font-size: 57px;
-			margin: 30px;
-		}
-		.titulos {
-			font-size: 43px;
-		}
-		td {
-			font-size: 31px;
-			padding: 10px 20px;
-			text-align: center;
-		}
-	}
-	.featurette-heading {
-		margin-top: 4.5rem;
-	}
-	.lead{
-		font-size: 2rem;
-	}
-	.lugar {
-		img {
-			width: 500px;
-			height: 307px;
-		}
-	}
-	.lugares {
-		img {
-			width: 500px;
-			height: 307px;
-		}
-	}
-	footer {
-		img {
-			width: 80px;
-			margin-left: -440px;
-		}
-	}
-	/* sucursales-pag */
-	#locales {
-		.ubication img{
-			width: 10rem;
-		}
-		h1 {
-			font-size: 60px;
-		}
-	}
-	.sucursales{
-		.sucursalesCard{
-			.sitio {
+			h1 {
 				font-size: 55px;
 			}
-			.sucursales__items1, .sucursales__items2, .sucursales__items3 {
-				min-height: 268px;
+		}
+		.sucursales{
+			.sucursalesCard{
+				.sitio {
+					font-size: 45px;
+				}
+				.sucursales__items1, .sucursales__items2, .sucursales__items3 {
+					min-height: 208px;
+				}
+				.direccion {
+				margin-top: 3.5rem;
+				font-size: 35px;
+				}
 			}
-			.direccion {
-			margin-top: 3.5rem;
-			font-size: 40px;
+			}
+		#ubicaciones {
+			iframe {
+				width: 420px;
+				height: 106px;
 			}
 		}
-		}
-	#ubicaciones {
-		iframe {
-			width: 420px;
-			height: 206px;
-		}
-	}
-	/* menu-pag */
-	#fondomenu {
-		img {
-			width: 600px;
-			height: 564px;
-		}
-	}
-	#bebidas {
-		background-position: top-left;
-		img {
-			height: 446px;
-			width: 381px;
-		}
-	}
-	#imagenbebida {
-		img {
-			margin: 20px;
-			height: 136px;
-			width: 235px;
-		}
-	}
-	/* contactos-pag */
+			/* contactos-pag */
 	.final {
 		img {
-			width: 251px;
-			margin-bottom: 21px;
+			width: 121px;
+			margin-bottom: 15px;
 			margin-top: 0px;
 		}
 	}

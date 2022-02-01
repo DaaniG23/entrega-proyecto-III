@@ -123,25 +123,24 @@
                     <p>Deseo recibir las novedades <input id="checkbox" type="checkbox" name="acepta"></p>
                     <p>* Los campos son obligatorios.</p> 
                 </section>
-        <div class="botones"> 
-            <button type="submit" class="btn btn-outline-success">Enviar</button>     
+        <div class="botones">  
             <!-- Button trigger modal -->
-            <button type="reset" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Vaciar</button>
+            <button type="submit" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Enviar</button>
         </div>
             <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content contenidomodal">
         <div class="modal-header">
-          <h5 class="modal-title titulo" id="exampleModalLabel">Vaciar formulario</h5>
+          <h5 class="modal-title titulo" id="exampleModalLabel">Enviar formulario</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body cuerpo">
-          ¿De verdad querés descartar los cambios?
+          ¿De verdad querés enviar el formulario?
         </div>
         <div class="modal-footer">
-          <button type="reset" class="btn btn-dark" data-bs-dismiss="modal">Si, de verdad</button>
-          <button type="submit" class="btn btn-dark">No, deseo continuar</button>
+          <button type="submit" class="btn btn-dark" data-bs-dismiss="modal">Si, enviarlo</button>
+          <button type="reset" class="btn btn-dark">Borrar todo</button>
         </div>
       </div>
     </div>
