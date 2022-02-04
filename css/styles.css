@@ -12,8 +12,8 @@
 #grid-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 4.5rem 10rem 9rem 92.5rem 7rem;
-      grid-template-rows: 4.5rem 10rem 9rem 92.5rem 7rem;
+  -ms-grid-rows: 4.5rem 10rem 9rem 92.5rem auto;
+      grid-template-rows: 4.5rem 10rem 9rem 92.5rem auto;
       grid-template-areas: "header" "carrousel" "horarios" "contenido" "footer";
 }
 
@@ -148,16 +148,89 @@ body {
 }
 
 footer {
-  text-align: center;
+  margin-bottom: 0px;
   -ms-grid-row: 5;
   -ms-grid-column: 1;
   grid-area: footer;
 }
 
-footer img {
+footer .footerA {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+footer .footerA .logofooter {
   width: 60px;
   height: auto;
-  padding-bottom: 5px;
+  padding-bottom: 1px;
+}
+
+footer .footerA .redes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  gap: 40px;
+}
+
+footer .footerA .redes img {
+  height: 20px;
+  text-decoration: none;
+  margin-top: 20px;
+  margin-bottom: 9px;
+}
+
+footer .footerB {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  padding-left: 0px;
+}
+
+footer .footerB a {
+  text-decoration: none;
+  color: #a8a8a8;
+  padding-top: 1px;
+}
+
+#footercopyright p {
+  font-size: 0.6rem;
+  margin-top: 10px;
+  text-align: center;
 }
 
 /* pag sucursales */
@@ -577,8 +650,8 @@ footer img {
 /* RESPONSIVE CSS */
 @media (min-width: 375px) {
   #grid-container {
-    -ms-grid-rows: 4.5rem 12rem 9rem 86.5rem 6rem;
-        grid-template-rows: 4.5rem 12rem 9rem 86.5rem 6rem;
+    -ms-grid-rows: 4.5rem 12rem 9rem 86.5rem auto;
+        grid-template-rows: 4.5rem 12rem 9rem 86.5rem auto;
   }
   /* pag-sucursales */
   .sucursales .sucursalesCard .direccion {
@@ -614,15 +687,15 @@ footer img {
 
 @media (min-width: 425px) {
   #grid-container {
-    -ms-grid-rows: 4.5rem 13rem 9rem 87rem 6rem;
-        grid-template-rows: 4.5rem 13rem 9rem 87rem 6rem;
+    -ms-grid-rows: 4.5rem 13rem 9rem 87rem auto;
+        grid-template-rows: 4.5rem 13rem 9rem 87rem auto;
   }
 }
 
 @media (min-width: 728px) {
   #grid-container {
-    -ms-grid-rows: 6rem 25rem 13rem 63rem 5rem;
-        grid-template-rows: 6rem 25rem 13rem 63rem 5rem;
+    -ms-grid-rows: 6rem 25rem 13rem 63rem auto;
+        grid-template-rows: 6rem 25rem 13rem 63rem auto;
   }
   /* index-navegacion */
   .lachoppera .lacho {
@@ -678,26 +751,46 @@ footer img {
     padding-right: 30px;
   }
   footer {
+    margin-top: 10px;
+  }
+  footer .footerA {
+    width: 70px;
+  }
+  footer .footerA .logofooter {
+    margin-top: 25px;
+  }
+  footer .footerA .redes {
+    gap: 13px;
+  }
+  footer .linea {
+    border-right: 1px solid #6c757d;
+    height: 6rem;
+  }
+  footer .footerB {
+    margin-top: 18px;
+  }
+  footer .footerC {
+    margin-bottom: 0px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    text-align: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    -ms-grid-row: 5;
-    -ms-grid-column: 1;
-    grid-area: footer;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
-  footer img {
-    margin-left: -157px;
-    margin-top: 13px;
-  }
-  footer p {
-    margin-top: -39px;
+  #footercopyright p {
+    font-size: 0.6rem;
+    margin-top: 10px;
+    text-align: center;
   }
   /* sucursales-pag */
   #locales .ubication img {
@@ -857,8 +950,8 @@ footer img {
 
 @media (min-width: 1024px) {
   #grid-container {
-    -ms-grid-rows: 6rem 32rem 13rem 72rem 6rem;
-        grid-template-rows: 6rem 32rem 13rem 72rem 6rem;
+    -ms-grid-rows: 6rem 32rem 13rem 65rem auto;
+        grid-template-rows: 6rem 32rem 13rem 65rem auto;
   }
   .lachoppera .lacho {
     font-size: 55px;
@@ -886,8 +979,19 @@ footer img {
   .lead {
     font-size: 1.7rem;
   }
-  footer img {
-    margin-left: -277px;
+  footer .footerA .logofooter {
+    margin-top: 25px;
+    width: 80px;
+  }
+  footer .footerA .redes {
+    gap: 17px;
+  }
+  footer .footerA .redes img {
+    height: 27px;
+  }
+  footer .footerB {
+    margin-top: 18px;
+    font-size: 18px;
   }
   /* sucursales-pag */
   #locales .ubication img {
@@ -915,6 +1019,13 @@ footer img {
     width: 121px;
     margin-bottom: 15px;
     margin-top: 0px;
+  }
+}
+
+@media (min-width: 1440px) {
+  #grid-container {
+    -ms-grid-rows: 6rem 32rem 13rem 74rem auto;
+        grid-template-rows: 6rem 32rem 13rem 74rem auto;
   }
 }
 /*# sourceMappingURL=styles.css.map */
