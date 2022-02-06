@@ -11,7 +11,7 @@
 
 #grid-container {
 	display: grid;
-	grid-template-rows: 4.5rem 10rem 9rem 92.5rem auto;
+	grid-template-rows: 4.5rem 10.5rem 8.5rem 92rem auto;
 	grid-template-areas: "header" "carrousel" "horarios" "contenido" "footer";
 }
 .header {
@@ -28,15 +28,6 @@
 	.nave {
 		display: flex;
 		.navegacion {
-			font-size: 20px;
-			color: black;
-			text-align: right;
-			&:hover{
-				color:orangered;
-				text-decoration: overline;
-			}
-		}
-		.solo {
 			font-size: 20px;
 			color: black;
 			text-align: right;
@@ -117,6 +108,7 @@ body {
 footer {
 	margin-bottom: 0px;
 	grid-area: footer;
+	margin-top: 10px;
 	.footerA { 
 	display: flex;
 	justify-content: space-between;
@@ -167,9 +159,7 @@ footer {
 /* pag sucursales */
 #locales {
 	.ubication img{
-		margin-top: -4rem;
-		width: 4rem;
-		height: auto;
+		@include iconopaginas;
 	}
 	h1 {
 		font-size: 37px;
@@ -240,41 +230,73 @@ footer {
 	}
 }
 /* pag menu */
-.card {
-	text-align: center;
-	margin-top: 20px;
-	margin-bottom: 20px;
-}
-.card-body {
-	background-color: rgb(15, 14, 12);
-}
-#fondomenu {
-	background-image: url(../img/hamburguesa.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: left;
-	div {
-		margin-top: 60px;
-		display: flex;
-		justify-content: center;
-		margin-bottom: 60px;
+#comida {
+	.ubication img{
+		@include iconopaginas;
 	}
-	img {
-		width: 265px;
-		height: 600px;
+	h1 {
+		font-size: 37px;
+		text-align: center;
+		margin-top: -10px;
+		margin-bottom: -51px;
 	}
 }
-.imagenesmenu {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	img {
-		width: 285px;
-		height: 141px;
-		margin-bottom: 20px;
-		margin-top: 30px;
+.menu{
+	.menuCard {
+			border: 1px solid #a8a8a8;
+			border-radius: 100px 15px 15px 15px;
+			overflow: hidden;
+			margin: 0px;
+			transition: .5s;
+		&::before {
+			position: absolute;
+			transition: .5s;
+			}
+		&::after {
+			position: absolute;
+			transition: .5s;
+		}
+		&:hover {
+			transform: scale(1.05);
+			filter:grayscale(1);
+		}
+		.menu__items1 {
+			background: url(../img/hamburguesa.jpg) no-repeat;
+			@include menuitem;
+			}
+		.menu__items2 {
+			background: url(../img/papas-fritas-periplo.jpg) no-repeat;
+			@include menuitem;	
+		}
+		.menu__items3 {
+			background: url(../img/picadas.jpg) no-repeat;
+			@include menuitem;
+		}
+		.menu__items4 {
+			background: url(../img/mixbaston.jpg) no-repeat;
+			@include menuitem;
+		}
+		.menu__items5 {
+			background: url(../img/bebidas.jfif) no-repeat;
+			@include menuitem; 
+		}
+			.boton {
+				display: flex;
+				background-color: #dbca34;
+				text-decoration: none;
+				border-radius: 5px;
+				font-size: 21px;
+				color: black;
+				padding: 5px;
+				justify-content: center;
+				margin-bottom: 5px;
+			}
+		h2 {
+			text-align: center;
+		}
 	}
 }
+
 /* pag bebidas */
 #bebidas {
 	background-image: url(../img/bannerbis.jpg);
@@ -452,7 +474,7 @@ footer {
 /* RESPONSIVE CSS */
 @media (min-width: 375px) {
 	#grid-container {
-		grid-template-rows: 4.5rem 12rem 9rem 86.5rem auto;
+		grid-template-rows: 4.5rem 12rem 8.5rem 86.5rem auto;
 	}
 	/* pag-sucursales */
 	.sucursales .sucursalesCard .direccion {
@@ -470,12 +492,11 @@ footer {
 		}
 	}
 	/* pag-menu */
-	.imagenesmenu {
-		img {
-			width: 257px;
-			height: 141px;
-			margin-bottom: 20px;
-			margin-top: -8px;
+	.menu{
+		.menuCard{
+			.menu__items1, .menu__items2, .menu__items3, .menu__items4, .menu__items5 {
+				min-height: 106px;
+			}
 		}
 	}
 	/* pag-bebidas */
@@ -491,12 +512,20 @@ footer {
 }
 @media (min-width: 425px) {
 	#grid-container {
-		grid-template-rows: 4.5rem 13rem 9rem 87rem auto;
+		grid-template-rows: 4.5rem 13rem 8.5rem 87rem auto;
 	}
+		/* pag-menu */
+		.menu{
+			.menuCard{
+				.menu__items1, .menu__items2, .menu__items3, .menu__items4, .menu__items5 {
+					min-height: 112px;
+				}
+			}
+		}
 }
 @media (min-width: 728px) {
 	#grid-container {
-		grid-template-rows: 6rem 25rem 13rem 63rem auto;
+		grid-template-rows: 5.8rem 25rem 13.5rem 62.7rem auto;
 	}
 	/* index-navegacion */
 	.lachoppera {
@@ -627,31 +656,26 @@ footer {
 			}
 		}
 	/* menu-pag */
-	.card {
-		margin-top: 1px;
-		margin-bottom: 0px;
-	}
-	#fondomenu {
-		img {
-			width: 265px;
-			height: 600px;
-			width: 500px;
-			height: 457px;
+	#comida {
+		.ubication img{
+			width: 6rem;
 		}
-		div {
-			margin-top: 5px;
-			margin-bottom: 5px;
+		h1 {
+			font-size: 47px;
 		}
 	}
-	.imagenesmenu {
-		flex-direction: row;
-		justify-content: center;
-		gap: 35px;
-		img {
-			margin-bottom: 10px;
-			margin-top: 5px;
+	.menu{
+		.menuCard{
+			.menu__items1, .menu__items2, .menu__items3, .menu__items4, .menu__items5{
+				min-height: 142px;
+			}
+			  .alimento {
+			text-align: left;
+			margin-top: 1.5rem;
+			}
 		}
-	}
+		}
+	
 	/* bebidas -pag */
 	#bebidas {
 		background-position: left;
@@ -761,7 +785,7 @@ footer {
 }
 @media (min-width: 1024px) {
 	#grid-container {
-		grid-template-rows: 6rem 32rem 13rem 65rem auto;
+		grid-template-rows: 6.8rem 32rem 14.2rem 63.5rem auto;
 	}
 	.lachoppera {
 		.lacho {
@@ -842,6 +866,28 @@ footer {
 				height: 106px;
 			}
 		}
+		/* menu-pag */
+		#comida {
+			.ubication img{
+				width: 9rem;
+			}
+			h1 {
+				font-size: 55px;
+			}
+		}
+		.menu{
+			.menuCard{
+				.menu__items1, .menu__items2, .menu__items3, .menu__items4, .menu__items5 {
+					min-height: 136px;
+				}
+				.alimento {
+				margin-top: 0.5rem;
+				font-size: 35px;
+				}
+			}
+			}
+
+
 			/* contactos-pag */
 	.final {
 		img {
@@ -853,6 +899,6 @@ footer {
 }
 @media (min-width: 1440px) {
 	#grid-container {
-		grid-template-rows: 6rem 32rem 13rem 74rem auto;
+		grid-template-rows: 7rem 42.3rem 15rem 63.5rem auto;
 	} 
 }

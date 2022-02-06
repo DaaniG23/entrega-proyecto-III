@@ -12,8 +12,8 @@
 #grid-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 4.5rem 10rem 9rem 92.5rem auto;
-      grid-template-rows: 4.5rem 10rem 9rem 92.5rem auto;
+  -ms-grid-rows: 4.5rem 10.5rem 8.5rem 92rem auto;
+      grid-template-rows: 4.5rem 10.5rem 8.5rem 92rem auto;
       grid-template-areas: "header" "carrousel" "horarios" "contenido" "footer";
 }
 
@@ -47,17 +47,6 @@
 }
 
 .lachoppera .nave .navegacion:hover {
-  color: orangered;
-  text-decoration: overline;
-}
-
-.lachoppera .nave .solo {
-  font-size: 20px;
-  color: black;
-  text-align: right;
-}
-
-.lachoppera .nave .solo:hover {
   color: orangered;
   text-decoration: overline;
 }
@@ -152,6 +141,7 @@ footer {
   -ms-grid-row: 5;
   -ms-grid-column: 1;
   grid-area: footer;
+  margin-top: 10px;
 }
 
 footer .footerA {
@@ -381,57 +371,180 @@ footer .footerB a {
 }
 
 /* pag menu */
-.card {
+#comida .ubication img {
+  margin-top: -4rem;
+  width: 4rem;
+  height: auto;
+}
+
+#comida h1 {
+  font-size: 37px;
   text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: -10px;
+  margin-bottom: -51px;
 }
 
-.card-body {
-  background-color: #0f0e0c;
+.menu .menuCard {
+  border: 1px solid #a8a8a8;
+  border-radius: 100px 15px 15px 15px;
+  overflow: hidden;
+  margin: 0px;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
-#fondomenu {
-  background-image: url(../img/hamburguesa.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: left;
+.menu .menuCard::before {
+  position: absolute;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
-#fondomenu div {
-  margin-top: 60px;
+.menu .menuCard::after {
+  position: absolute;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.menu .menuCard:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.menu .menuCard .menu__items1 {
+  background: url(../img/hamburguesa.jpg) no-repeat;
+  min-height: 120px;
+  -webkit-filter: scale(1.05);
+          filter: scale(1.05);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 60px;
-}
-
-#fondomenu img {
-  width: 265px;
-  height: 600px;
-}
-
-.imagenesmenu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-size: cover;
+  background-position: center;
+  color: white;
 }
 
-.imagenesmenu img {
-  width: 285px;
-  height: 141px;
-  margin-bottom: 20px;
-  margin-top: 30px;
+.menu .menuCard .menu__items2 {
+  background: url(../img/papas-fritas-periplo.jpg) no-repeat;
+  min-height: 120px;
+  -webkit-filter: scale(1.05);
+          filter: scale(1.05);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.menu .menuCard .menu__items3 {
+  background: url(../img/picadas.jpg) no-repeat;
+  min-height: 120px;
+  -webkit-filter: scale(1.05);
+          filter: scale(1.05);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.menu .menuCard .menu__items4 {
+  background: url(../img/mixbaston.jpg) no-repeat;
+  min-height: 120px;
+  -webkit-filter: scale(1.05);
+          filter: scale(1.05);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.menu .menuCard .menu__items5 {
+  background: url(../img/bebidas.jfif) no-repeat;
+  min-height: 120px;
+  -webkit-filter: scale(1.05);
+          filter: scale(1.05);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.menu .menuCard .boton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #dbca34;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 21px;
+  color: black;
+  padding: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 5px;
+}
+
+.menu .menuCard h2 {
+  text-align: center;
 }
 
 /* pag bebidas */
@@ -650,8 +763,8 @@ footer .footerB a {
 /* RESPONSIVE CSS */
 @media (min-width: 375px) {
   #grid-container {
-    -ms-grid-rows: 4.5rem 12rem 9rem 86.5rem auto;
-        grid-template-rows: 4.5rem 12rem 9rem 86.5rem auto;
+    -ms-grid-rows: 4.5rem 12rem 8.5rem 86.5rem auto;
+        grid-template-rows: 4.5rem 12rem 8.5rem 86.5rem auto;
   }
   /* pag-sucursales */
   .sucursales .sucursalesCard .direccion {
@@ -667,11 +780,8 @@ footer .footerB a {
     height: 92px;
   }
   /* pag-menu */
-  .imagenesmenu img {
-    width: 257px;
-    height: 141px;
-    margin-bottom: 20px;
-    margin-top: -8px;
+  .menu .menuCard .menu__items1, .menu .menuCard .menu__items2, .menu .menuCard .menu__items3, .menu .menuCard .menu__items4, .menu .menuCard .menu__items5 {
+    min-height: 106px;
   }
   /* pag-bebidas */
   #imagenbebida img {
@@ -687,15 +797,19 @@ footer .footerB a {
 
 @media (min-width: 425px) {
   #grid-container {
-    -ms-grid-rows: 4.5rem 13rem 9rem 87rem auto;
-        grid-template-rows: 4.5rem 13rem 9rem 87rem auto;
+    -ms-grid-rows: 4.5rem 13rem 8.5rem 87rem auto;
+        grid-template-rows: 4.5rem 13rem 8.5rem 87rem auto;
+  }
+  /* pag-menu */
+  .menu .menuCard .menu__items1, .menu .menuCard .menu__items2, .menu .menuCard .menu__items3, .menu .menuCard .menu__items4, .menu .menuCard .menu__items5 {
+    min-height: 112px;
   }
 }
 
 @media (min-width: 728px) {
   #grid-container {
-    -ms-grid-rows: 6rem 25rem 13rem 63rem auto;
-        grid-template-rows: 6rem 25rem 13rem 63rem auto;
+    -ms-grid-rows: 5.8rem 25rem 13.5rem 62.7rem auto;
+        grid-template-rows: 5.8rem 25rem 13.5rem 62.7rem auto;
   }
   /* index-navegacion */
   .lachoppera .lacho {
@@ -815,33 +929,18 @@ footer .footerB a {
     height: 123px;
   }
   /* menu-pag */
-  .card {
-    margin-top: 1px;
-    margin-bottom: 0px;
+  #comida .ubication img {
+    width: 6rem;
   }
-  #fondomenu img {
-    width: 265px;
-    height: 600px;
-    width: 500px;
-    height: 457px;
+  #comida h1 {
+    font-size: 47px;
   }
-  #fondomenu div {
-    margin-top: 5px;
-    margin-bottom: 5px;
+  .menu .menuCard .menu__items1, .menu .menuCard .menu__items2, .menu .menuCard .menu__items3, .menu .menuCard .menu__items4, .menu .menuCard .menu__items5 {
+    min-height: 142px;
   }
-  .imagenesmenu {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    gap: 35px;
-  }
-  .imagenesmenu img {
-    margin-bottom: 10px;
-    margin-top: 5px;
+  .menu .menuCard .alimento {
+    text-align: left;
+    margin-top: 1.5rem;
   }
   /* bebidas -pag */
   #bebidas {
@@ -950,8 +1049,8 @@ footer .footerB a {
 
 @media (min-width: 1024px) {
   #grid-container {
-    -ms-grid-rows: 6rem 32rem 13rem 65rem auto;
-        grid-template-rows: 6rem 32rem 13rem 65rem auto;
+    -ms-grid-rows: 6.8rem 32rem 14.2rem 63.5rem auto;
+        grid-template-rows: 6.8rem 32rem 14.2rem 63.5rem auto;
   }
   .lachoppera .lacho {
     font-size: 55px;
@@ -1014,6 +1113,20 @@ footer .footerB a {
     width: 420px;
     height: 106px;
   }
+  /* menu-pag */
+  #comida .ubication img {
+    width: 9rem;
+  }
+  #comida h1 {
+    font-size: 55px;
+  }
+  .menu .menuCard .menu__items1, .menu .menuCard .menu__items2, .menu .menuCard .menu__items3, .menu .menuCard .menu__items4, .menu .menuCard .menu__items5 {
+    min-height: 136px;
+  }
+  .menu .menuCard .alimento {
+    margin-top: 0.5rem;
+    font-size: 35px;
+  }
   /* contactos-pag */
   .final img {
     width: 121px;
@@ -1024,8 +1137,8 @@ footer .footerB a {
 
 @media (min-width: 1440px) {
   #grid-container {
-    -ms-grid-rows: 6rem 32rem 13rem 74rem auto;
-        grid-template-rows: 6rem 32rem 13rem 74rem auto;
+    -ms-grid-rows: 7rem 42.3rem 15rem 63.5rem auto;
+        grid-template-rows: 7rem 42.3rem 15rem 63.5rem auto;
   }
 }
 /*# sourceMappingURL=styles.css.map */
