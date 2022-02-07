@@ -224,6 +224,12 @@ footer .footerB a {
 }
 
 /* pag sucursales */
+.bannersucursales {
+  background-image: url(../img/pizarra.jpg);
+  background-size: cover;
+  min-height: 100%;
+}
+
 #locales .ubication img {
   margin-top: -4rem;
   width: 4rem;
@@ -371,6 +377,12 @@ footer .footerB a {
 }
 
 /* pag menu */
+.bannermenu {
+  background-image: url(../img/promocomida.jpg);
+  background-size: cover;
+  min-height: 100%;
+}
+
 #comida .ubication img {
   margin-top: -4rem;
   width: 4rem;
@@ -381,7 +393,11 @@ footer .footerB a {
   font-size: 37px;
   text-align: center;
   margin-top: -10px;
-  margin-bottom: -51px;
+  margin-bottom: -62px;
+}
+
+.menu {
+  margin-top: 2rem;
 }
 
 .menu .menuCard {
@@ -391,6 +407,7 @@ footer .footerB a {
   margin: 0px;
   -webkit-transition: .5s;
   transition: .5s;
+  margin-bottom: 2.5rem;
 }
 
 .menu .menuCard::before {
@@ -548,89 +565,153 @@ footer .footerB a {
 }
 
 /* pag bebidas */
-#bebidas {
-  background-image: url(../img/bannerbis.jpg);
-  background-position: left;
-  background-repeat: no-repeat;
+.bannerbebidas {
+  background-image: url(../img/vaasocerveza.jpg);
   background-size: cover;
+  min-height: 100%;
 }
 
-#bebidas h2 {
-  font-size: 29px;
+#bebidas .ubication img {
+  margin-top: -4rem;
+  width: 4rem;
+  height: auto;
+}
+
+#bebidas h1 {
+  font-size: 37px;
   text-align: center;
-  text-decoration: underline;
-  margin-top: 20px;
-  margin-bottom: 30px;
+  margin-top: -10px;
+  margin-bottom: -51px;
 }
 
-#bebidas div {
+.cervezas {
+  margin-top: 2rem;
+}
+
+.cervezas .cervezasCard {
+  border: 1px solid #a8a8a8;
+  border-radius: 15px 100px 15px 15px;
+  overflow: hidden;
+  margin: 0px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  margin-bottom: 2.5rem;
+}
+
+.cervezas .cervezasCard::before {
+  position: absolute;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.cervezas .cervezasCard::after {
+  position: absolute;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.cervezas .cervezasCard:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.cervezas .cervezasCard .cervezas__items1 {
+  background: url(../img/rubio.jpg) no-repeat;
+  min-height: 190px;
+  -webkit-filter: scale(1.05);
+          filter: scale(1.05);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  background-size: cover;
+  background-position: center;
+  color: white;
 }
 
-#bebidas img {
-  height: 296px;
-  width: auto;
-  margin: 15px;
-  border: solid 2px #a8a8a8;
-  border-radius: 10px;
-}
-
-#botones {
+.cervezas .cervezasCard .cervezas__items2 {
+  background: url(../img/red.jpg) no-repeat;
+  min-height: 190px;
+  -webkit-filter: scale(1.05);
+          filter: scale(1.05);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.colapse {
-  background-color: tomato;
-  color: black;
-  font-size: 27px;
-}
-
-.botonescuerpo {
-  color: #a8a8a8;
-  font-size: 25px;
-  width: 300px;
-}
-
-#imagenbebida div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.cervezas .cervezasCard .cervezas__items3 {
+  background: url(../img/negra.jpg) no-repeat;
+  min-height: 190px;
+  -webkit-filter: scale(1.05);
+          filter: scale(1.05);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-size: cover;
+  background-position: center;
+  color: white;
 }
 
-#imagenbebida img {
-  height: 113px;
-  width: 182px;
-  margin: 7px;
+.cervezas .cervezasCard .cervezas__items4 {
+  background: url(../img/mixbirra.jpg) no-repeat;
+  background-position: right;
+  min-height: 190px;
+  -webkit-filter: scale(1.05);
+          filter: scale(1.05);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.cervezas .cervezasCard h2 {
+  text-align: center;
 }
 
 /* pag contacto */
@@ -784,10 +865,8 @@ footer .footerB a {
     min-height: 106px;
   }
   /* pag-bebidas */
-  #imagenbebida img {
-    height: 84px;
-    width: 164px;
-    margin: 7px;
+  .cervezas .cervezasCard .cervezas__items1, .cervezas .cervezasCard .cervezas__items2, .cervezas .cervezasCard .cervezas__items3, .cervezas .cervezasCard .cervezas__items4 {
+    min-height: 174px;
   }
   /* pag-contacto */
   .final img {
@@ -803,6 +882,10 @@ footer .footerB a {
   /* pag-menu */
   .menu .menuCard .menu__items1, .menu .menuCard .menu__items2, .menu .menuCard .menu__items3, .menu .menuCard .menu__items4, .menu .menuCard .menu__items5 {
     min-height: 112px;
+  }
+  /* pag-bebidas */
+  .cervezas .cervezasCard .cervezas__items1, .cervezas .cervezasCard .cervezas__items2, .cervezas .cervezasCard .cervezas__items3, .cervezas .cervezasCard .cervezas__items4 {
+    min-height: 182px;
   }
 }
 
@@ -943,47 +1026,18 @@ footer .footerB a {
     margin-top: 1.5rem;
   }
   /* bebidas -pag */
-  #bebidas {
-    background-position: left;
+  #bebidas .ubication img {
+    width: 6rem;
   }
-  #bebidas h2 {
-    font-size: 49px;
-    margin-top: 0px;
+  #bebidas h1 {
+    font-size: 47px;
   }
-  #bebidas div {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    margin: 40px;
+  .cervezas .cervezasCard .cervezas__items1, .cervezas .cervezasCard .cervezas__items2, .cervezas .cervezasCard .cervezas__items3, .cervezas .cervezasCard .cervezas__items4 {
+    min-height: 202px;
   }
-  #bebidas img {
-    height: 401px;
-    width: 277px;
-    margin-top: 5px;
-  }
-  .colapse {
-    font-size: 27px;
-  }
-  .botonescuerpo {
-    color: #a8a8a8;
-    font-size: 35px;
-    width: auto;
-    margin-bottom: 0px;
-  }
-  #imagenbebida div {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    margin-top: 1px;
-  }
-  #imagenbebida img {
-    height: 113px;
-    width: 182px;
-    margin: 7px;
+  .cervezas .cervezasCard .birra {
+    text-align: center;
+    margin-top: 2.5rem;
   }
   /* contacto-pag */
   #formulario .titulos {
@@ -1126,6 +1180,10 @@ footer .footerB a {
   .menu .menuCard .alimento {
     margin-top: 0.5rem;
     font-size: 35px;
+  }
+  /* bebidas-pag */
+  .cervezas .cervezasCard .cervezas__items1, .cervezas .cervezasCard .cervezas__items2, .cervezas .cervezasCard .cervezas__items3, .cervezas .cervezasCard .cervezas__items4 {
+    min-height: 207px;
   }
   /* contactos-pag */
   .final img {
