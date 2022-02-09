@@ -10,20 +10,22 @@
 }
 
 #grid-container {
+  overflow: hidden;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 4.5rem 10.5rem 8.5rem 92rem auto;
-      grid-template-rows: 4.5rem 10.5rem 8.5rem 92rem auto;
-      grid-template-areas: "header" "carrousel" "horarios" "contenido" "footer";
+  -ms-grid-rows: 4.5rem 10.5rem 10.5rem 91.7rem auto;
+      grid-template-rows: 4.5rem 10.5rem 10.5rem 91.7rem auto;
+      grid-template-areas: "header"  "banner"  "encabezado"  "contenido"  "footer";
 }
 
-.header {
+header {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: header;
 }
 
 .lachoppera {
+  margin-top: 0px;
   background-color: #dbca34;
 }
 
@@ -34,10 +36,15 @@
   letter-spacing: 1px;
 }
 
+.lachoppera .botellas {
+  background-image: url(../img/iconomenu2.png);
+}
+
 .lachoppera .nave {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-right: 13px;
 }
 
 .lachoppera .nave .navegacion {
@@ -52,11 +59,11 @@
 }
 
 .carousel {
-  margin-bottom: 1rem;
-  margin-top: 2rem;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
-  grid-area: carrousel;
+  grid-area: banner;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
 }
 
 body {
@@ -67,7 +74,7 @@ body {
 #horarios {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
-  grid-area: horarios;
+  grid-area: encabezado;
 }
 
 #horarios .titulo {
@@ -137,10 +144,10 @@ body {
 }
 
 footer {
-  margin-bottom: 0px;
   -ms-grid-row: 5;
   -ms-grid-column: 1;
   grid-area: footer;
+  margin-bottom: 0px;
   margin-top: 10px;
 }
 
@@ -225,9 +232,16 @@ footer .footerB a {
 
 /* pag sucursales */
 .bannersucursales {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: banner;
   background-image: url(../img/pizarra.jpg);
   background-size: cover;
   min-height: 100%;
+}
+
+#locales {
+  grid-area: horarios;
 }
 
 #locales .ubication img {
@@ -241,6 +255,12 @@ footer .footerB a {
   text-align: center;
   margin-top: -10px;
   margin-bottom: -55px;
+}
+
+.sucursales {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: contenido;
 }
 
 .sucursales .sucursalesCard {
@@ -373,14 +393,19 @@ footer .footerB a {
 #ubicaciones iframe {
   margin: 5px;
   width: 90px;
-  height: 85px;
+  height: 89px;
 }
 
 /* pag menu */
 .bannermenu {
+  grid-area: carrousel;
   background-image: url(../img/promocomida.jpg);
   background-size: cover;
   min-height: 100%;
+}
+
+#comida {
+  grid-area: horarios;
 }
 
 #comida .ubication img {
@@ -397,6 +422,9 @@ footer .footerB a {
 }
 
 .menu {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: contenido;
   margin-top: 2rem;
 }
 
@@ -566,9 +594,14 @@ footer .footerB a {
 
 /* pag bebidas */
 .bannerbebidas {
+  grid-area: carrousel;
   background-image: url(../img/vaasocerveza.jpg);
   background-size: cover;
   min-height: 100%;
+}
+
+#bebidas {
+  grid-area: horarios;
 }
 
 #bebidas .ubication img {
@@ -585,7 +618,10 @@ footer .footerB a {
 }
 
 .cervezas {
-  margin-top: 2rem;
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: contenido;
+  margin-top: 2.2rem;
 }
 
 .cervezas .cervezasCard {
@@ -715,23 +751,48 @@ footer .footerB a {
 }
 
 /* pag contacto */
-#formulario .titulos {
+.bannercontactos {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: banner;
+  background-image: url(../img/viva.jpg);
+  background-size: cover;
+  min-height: 100%;
+}
+
+#formcont {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: encabezado;
+}
+
+#formcont .ubication img {
+  margin-top: -4rem;
+  width: 4rem;
+  height: auto;
+}
+
+#formcont h1 {
+  font-size: 34px;
   text-align: center;
-  margin-top: 50px;
+  margin-top: -10px;
+  margin-bottom: -62px;
 }
 
-#formulario div h2 {
-  font-size: 27px;
-  padding-bottom: 7px;
+.titulos {
+  text-align: center;
+  margin-top: 48px;
 }
 
-#formulario div h3 {
+h2 {
   font-size: 22px;
   padding-bottom: 12px;
-  margin-top: 20px;
 }
 
 #contenidoformulario {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: contenido;
   width: 283px;
   height: 854px;
   margin: 33px auto;
@@ -843,10 +904,9 @@ footer .footerB a {
 
 /* RESPONSIVE CSS */
 @media (min-width: 375px) {
-  #grid-container {
-    -ms-grid-rows: 4.5rem 12rem 8.5rem 86.5rem auto;
-        grid-template-rows: 4.5rem 12rem 8.5rem 86.5rem auto;
-  }
+  /* 	#grid-container {
+		grid-template-rows: 4.5rem 12rem 8.5rem 86.5rem auto;
+	} */
   /* pag-sucursales */
   .sucursales .sucursalesCard .direccion {
     margin-bottom: 1.5rem;
@@ -875,10 +935,9 @@ footer .footerB a {
 }
 
 @media (min-width: 425px) {
-  #grid-container {
-    -ms-grid-rows: 4.5rem 13rem 8.5rem 87rem auto;
-        grid-template-rows: 4.5rem 13rem 8.5rem 87rem auto;
-  }
+  /* 	#grid-container {
+		grid-template-rows: 4.5rem 13rem 8.5rem 87rem auto;
+	} */
   /* pag-menu */
   .menu .menuCard .menu__items1, .menu .menuCard .menu__items2, .menu .menuCard .menu__items3, .menu .menuCard .menu__items4, .menu .menuCard .menu__items5 {
     min-height: 112px;
@@ -890,10 +949,9 @@ footer .footerB a {
 }
 
 @media (min-width: 728px) {
-  #grid-container {
-    -ms-grid-rows: 5.8rem 25rem 13.5rem 62.7rem auto;
-        grid-template-rows: 5.8rem 25rem 13.5rem 62.7rem auto;
-  }
+  /* 	#grid-container {
+		grid-template-rows: 5.8rem 25rem 13.5rem 62.7rem auto;
+	} */
   /* index-navegacion */
   .lachoppera .lacho {
     font-size: 45px;
@@ -1102,10 +1160,9 @@ footer .footerB a {
 }
 
 @media (min-width: 1024px) {
-  #grid-container {
-    -ms-grid-rows: 6.8rem 32rem 14.2rem 63.5rem auto;
-        grid-template-rows: 6.8rem 32rem 14.2rem 63.5rem auto;
-  }
+  /* 	#grid-container {
+		grid-template-rows: 6.8rem 32rem 14.2rem 63.5rem auto;
+	} */
   .lachoppera .lacho {
     font-size: 55px;
   }
@@ -1193,10 +1250,9 @@ footer .footerB a {
   }
 }
 
-@media (min-width: 1440px) {
-  #grid-container {
-    -ms-grid-rows: 7rem 42.3rem 15rem 63.5rem auto;
-        grid-template-rows: 7rem 42.3rem 15rem 63.5rem auto;
-  }
-}
+/* @media (min-width: 1440px) {
+	#grid-container {
+		grid-template-rows: 7rem 42.3rem 15rem 63.5rem auto;
+	} 
+} */
 /*# sourceMappingURL=styles.css.map */

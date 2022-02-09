@@ -17,17 +17,19 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
 </head>
-<body>
+<body id="body">
 <div id="grid-container">
-<header class="header">
-  <nav class="navbar navbar-expand-md navbar-light fixed-top lachoppera">
-    <div class="container-fluid">
+  <!-- header -->
+<header>
+    <nav class="navbar navbar-expand-md navbar-light fixed-top lachoppera">
+      <div class="container-fluid">
         <a class="navbar-brand lacho" href="./index.html">La Choppera Loca</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon botellas"></span>
           </button>
+      </div>
       <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0 nave">
+        <ul class="navbar-nav mb-2 mb-md-0 nave">
           <li class="nav-item">
             <a class="nav-link navegacion" href="./index.html">Inicio</a>
           </li>
@@ -44,10 +46,10 @@
             <a class="nav-link navegacion" href="./paginas/contactos.html">Contacto</a>
           </li>
         </ul>
-      </div>
     </div>
   </nav>
 </header>
+<!-- carrousel -->
 <main>
   <div id="carouselExampleControls" class="carousel slide carrouselMargin" data-bs-ride="carousel">
     <div class="carousel-inner">
@@ -73,6 +75,7 @@
           <span class="visually-hidden">Next</span>
       </button>
   </div>
+<!-- horarios -->
   <section id="horarios">
     <h3 class="titulo">Días y Horarios</h3>
       <table class="tabla">  
@@ -98,6 +101,7 @@
         </tr>
       </table>
   </section>  
+  <!-- contenido -->
 <div class="container marketing">
   <hr class="featurette-divider">
     <div class="row featurette">
@@ -133,7 +137,7 @@
 </div>
 </main>
 <footer>
-  <div class="footerC">
+<div class="footerC">
 <div class="footerA">
     <a href="#header">
       <img class="logofooter" src="../img/logo_2.png" alt="Logo">

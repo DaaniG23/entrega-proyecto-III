@@ -10,14 +10,21 @@
 @import 'vars';
 
 #grid-container {
+	overflow: hidden;
 	display: grid;
-	grid-template-rows: 4.5rem 10.5rem 8.5rem 92rem auto;
-	grid-template-areas: "header" "carrousel" "horarios" "contenido" "footer";
+	grid-template-rows: 4.5rem 10.5rem 10.5rem 91.7rem auto;
+	grid-template-areas: 
+	"header" 
+	"banner" 
+	"encabezado" 
+	"contenido" 
+	"footer";
 }
-.header {
+header {
 	grid-area: header;
 }
 .lachoppera {
+	margin-top: 0px;
 	background-color: #dbca34;
 	.lacho {
 		color: black;
@@ -25,8 +32,12 @@
 		font-weight: bold;
 		letter-spacing: 1px;
 	}
+	.botellas {
+		background-image: url(../img/iconomenu2.png);
+	}
 	.nave {
 		display: flex;
+		margin-right: 13px;
 		.navegacion {
 			font-size: 20px;
 			color: black;
@@ -39,16 +50,16 @@
 	}
 }
 .carousel {
+	grid-area: banner;
 	margin-bottom: 1rem;
 	margin-top: 2rem;
-	grid-area: carrousel;
 }
 body {
 	background-color: rgb(15, 14, 12);
 	color: #a8a8a8;
 }
 #horarios {
-	grid-area: horarios;
+	grid-area: encabezado;
 	.titulo {
 		padding: 3px;
 		text-align: center;
@@ -106,8 +117,8 @@ body {
 	}
 }
 footer {
-	margin-bottom: 0px;
 	grid-area: footer;
+	margin-bottom: 0px;
 	margin-top: 10px;
 	.footerA { 
 	display: flex;
@@ -158,10 +169,12 @@ footer {
 
 /* pag sucursales */
 .bannersucursales{
+	grid-area: banner;
 	background-image: url(../img/pizarra.jpg);
 	@include banner;
 }
 #locales {
+	grid-area: horarios;
 	.ubication img{
 		@include iconopaginas;
 	}
@@ -173,6 +186,7 @@ footer {
 	}
 }
 .sucursales{
+	grid-area: contenido;
 	.sucursalesCard {
 			border: 1px solid #a8a8a8;
 			border-radius: 100px 15px 100px;
@@ -230,15 +244,17 @@ footer {
 	iframe {
 		margin: 5px;
 		width: 90px;
-		height: 85px;
+		height: 89px;
 	}
 }
 /* pag menu */
 .bannermenu{
+	grid-area: carrousel;
 	background-image: url(../img/promocomida.jpg);
 	@include banner;
 }
 #comida {
+	grid-area: horarios;
 	.ubication img{
 		@include iconopaginas;
 	}
@@ -250,6 +266,7 @@ footer {
 	}
 }
 .menu{
+	grid-area: contenido;
 	margin-top: 2rem;
 	.menuCard {
 			border: 1px solid #a8a8a8;
@@ -309,10 +326,12 @@ footer {
 
 /* pag bebidas */
 .bannerbebidas{
+	grid-area: carrousel;
 	background-image: url(../img/vaasocerveza.jpg);
 	@include banner;
 }
 #bebidas {
+	grid-area: horarios;
 	.ubication img{
 		@include iconopaginas;
 	}
@@ -324,7 +343,8 @@ footer {
 	}
 }
 .cervezas{
-	margin-top: 2rem;
+	grid-area: contenido;
+	margin-top: 2.2rem;
 	.cervezasCard {
 			border: 1px solid #a8a8a8;
 			border-radius: 15px 100px 15px 15px;
@@ -367,24 +387,33 @@ footer {
 	}
 }
 /* pag contacto */
-#formulario {
-	.titulos {
-		text-align: center;
-		margin-top: 50px;
+.bannercontactos{
+	grid-area: banner;
+	background-image: url(../img/viva.jpg);
+	@include banner;
+}
+#formcont {
+	grid-area: encabezado;
+	.ubication img{
+		@include iconopaginas;
 	}
-	div {
-		h2 {
-			font-size: 27px;
-			padding-bottom: 7px;
-		}
-		h3 {
-			font-size: 22px;
-			padding-bottom: 12px;
-			margin-top: 20px;
-		}
+	h1 {
+		font-size: 34px;
+		text-align: center;
+		margin-top: -10px;
+		margin-bottom: -62px;
 	}
 }
+.titulos {
+		text-align: center;
+		margin-top: 48px;
+	}
+		h2 {
+			font-size: 22px;
+			padding-bottom: 12px;
+		}
 #contenidoformulario {
+	grid-area: contenido;
 	width: 283px;
 	height: 854px;
 	margin: 33px auto;
@@ -486,9 +515,9 @@ footer {
 }
 /* RESPONSIVE CSS */
 @media (min-width: 375px) {
-	#grid-container {
+/* 	#grid-container {
 		grid-template-rows: 4.5rem 12rem 8.5rem 86.5rem auto;
-	}
+	} */
 	/* pag-sucursales */
 	.sucursales .sucursalesCard .direccion {
 		margin-bottom: 1.5rem;
@@ -526,9 +555,9 @@ footer {
 	}
 }
 @media (min-width: 425px) {
-	#grid-container {
+/* 	#grid-container {
 		grid-template-rows: 4.5rem 13rem 8.5rem 87rem auto;
-	}
+	} */
 		/* pag-menu */
 		.menu{
 			.menuCard{
@@ -547,9 +576,9 @@ footer {
 		}
 }
 @media (min-width: 728px) {
-	#grid-container {
+/* 	#grid-container {
 		grid-template-rows: 5.8rem 25rem 13.5rem 62.7rem auto;
-	}
+	} */
 	/* index-navegacion */
 	.lachoppera {
 		.lacho {
@@ -788,9 +817,9 @@ footer {
 	}
 }
 @media (min-width: 1024px) {
-	#grid-container {
+/* 	#grid-container {
 		grid-template-rows: 6.8rem 32rem 14.2rem 63.5rem auto;
-	}
+	} */
 	.lachoppera {
 		.lacho {
 			font-size: 55px;
@@ -907,8 +936,8 @@ footer {
 				}
 			}
 }
-@media (min-width: 1440px) {
+/* @media (min-width: 1440px) {
 	#grid-container {
 		grid-template-rows: 7rem 42.3rem 15rem 63.5rem auto;
 	} 
-}
+} */
