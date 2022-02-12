@@ -633,13 +633,6 @@ footer {
 				padding: 7px;
 				}
 	}
-	.navbar-light {
-		.navbar-nav {
-			.nav-link.active {
-				color: black;
-			}
-		}
-	}
 	/* horarios */
 	#horarios {
 		.titulo {
@@ -868,63 +861,58 @@ footer {
 	}
 }
 @media (min-width: 1024px) {
-/* 	#grid-container {
-		grid-template-rows: 6.8rem 32rem 14.2rem 63.5rem auto;
-	} */
+	#grid-container {
+		grid-template-rows: 6.8rem 27rem 18.2rem 61.5rem auto;
+	}
 	.lachoppera {
 		.lacho {
-			font-size: 55px;
+			font-size: 50px;
 		}
-		.nave {
-			padding-left: 27rem;
-			.solo {
+		.nave .navegacion {
 				font-size: 30px;
-			}
-			.navegacion {
-			font-size: 30px;
-			}
-		}
+				}
 	}
 	/* horarios */
 	#horarios {
 		.titulo {
-			font-size: 49px;
-			margin: 20px;
+			font-size: 52px;
+			margin-bottom: 43px;
 		}
 		.titulos {
-			font-size: 33px;
+			font-size: 29px;
 		}
 		td {
-			font-size: 23px;
-			}
+			font-size: 27px;
+			padding: 1px 10px;
+		}
 	}
 	.lead{
 		font-size: 1.7rem;
 	}
+	.lugar {
+		img {
+			padding-right: 0px;
+		}
+	}
 	footer {
-		.footerA { 
-			.logofooter {
-			margin-top: 25px;
-			width: 80px;
-			}
-			.redes {
-				gap: 17px;
-			}
-			.redes img {
-				height: 27px;
-			}
-	
+		margin-top: 10px;
+		.footerA .redes{ 
+				gap: 23px;
+				height: 37px;
+		}
+		.linea {
+			border-right:  1px solid #6c757d;
+			height: 6rem;
 		}
 		.footerB { 
 			margin-top: 18px;
 			font-size: 18px;
 		}
 	}
-
 		/* sucursales-pag */
 		#locales {
 			.ubication img{
-				width: 10rem;
+				width: 8rem;
 			}
 			h1 {
 				font-size: 55px;
@@ -946,17 +934,18 @@ footer {
 			}
 		#ubicaciones {
 			iframe {
-				width: 420px;
-				height: 106px;
+				width: 312px;
+				height: 116px;
 			}
 		}
 		/* menu-pag */
 		#comida {
 			.ubication img{
-				width: 9rem;
+				width: 8rem;
 			}
 			h1 {
 				font-size: 55px;
+				margin-bottom: -30px;
 			}
 		}
 		.menu{
@@ -966,26 +955,46 @@ footer {
 				}
 				.alimento {
 				margin-top: 0.5rem;
-				font-size: 35px;
+				font-size: 30px;
 				}
 			}
 			}
-		/* bebidas-pag */
+		/* cervezas -pag */
+		#bebidas {
+			.ubication img{
+				width: 8rem;
+			}
+			h1 {
+				font-size: 55px;
+				margin-bottom: -30px;
+			}
+		}
 			.cervezas{
 				.cervezasCard{
 					.cervezas__items1, .cervezas__items2, .cervezas__items3, .cervezas__items4 {
-						min-height: 207px;
+						min-height: 210px;
 					}
 				}
 			}
 		/* contactos-pag */
-			.final {
-				img {
-					width: 121px;
-					margin-bottom: 15px;
-					margin-top: 0px;
-				}
+		#grid-container2 {
+			grid-template-rows: 6.8rem 27rem 18.2rem 52.1rem auto;
+		}
+		#formcont{
+			.ubication img{
+				width: 8rem;
 			}
+			h1 {
+				font-size: 55px;
+				margin-bottom: -71px;
+			}
+		}
+		.titulos h2 {
+			font-size: 40px;
+		}
+		.botones button {
+			margin-left: 12px;
+		}
 }
 /* @media (min-width: 1440px) {
 	#grid-container {
