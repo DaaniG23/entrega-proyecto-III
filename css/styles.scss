@@ -12,7 +12,7 @@
 #grid-container {
 	overflow: hidden;
 	display: grid;
-	grid-template-rows: 4.5rem 10.5rem 10.5rem 91.5rem auto;
+	grid-template-rows: 4.5rem 8.5rem 10.5rem 91.3rem auto;
 	grid-template-areas: 
 	"header" 
 	"banner" 
@@ -37,7 +37,7 @@ header {
 	}
 	.nave {
 		display: flex;
-		margin-right: 13px;
+		margin-right: 8px;
 		.navegacion {
 			font-size: 20px;
 			color: black;
@@ -52,7 +52,6 @@ header {
 .carousel {
 	grid-area: banner;
 	margin-bottom: 1rem;
-	margin-top: 2rem;
 }
 body {
 	background-color: rgb(15, 14, 12);
@@ -182,9 +181,8 @@ footer {
 		@include iconopaginas;
 	}
 	h1 {
+		@include titulopaginas;
 		font-size: 37px;
-		text-align: center;
-		margin-top: -10px;
 		margin-bottom: -55px;
 	}
 }
@@ -262,15 +260,14 @@ footer {
 		@include iconopaginas;
 	}
 	h1 {
+		@include titulopaginas;
 		font-size: 37px;
-		text-align: center;
-		margin-top: -10px;
 		margin-bottom: -62px;
 	}
 }
 .menu{
 	grid-area: contenido;
-	margin-top: 2rem;
+	margin-top: 1.9rem;
 	.menuCard {
 			border: 1px solid #a8a8a8;
 			border-radius: 100px 15px 15px 15px;
@@ -327,7 +324,7 @@ footer {
 	}
 }
 
-/* pag bebidas */
+/* pag cervezas */
 .bannerbebidas{
 	grid-area: carrousel;
 	background-image: url(../img/vaasocerveza.jpg);
@@ -339,15 +336,14 @@ footer {
 		@include iconopaginas;
 	}
 	h1 {
+		@include titulopaginas;
 		font-size: 37px;
-		text-align: center;
-		margin-top: -10px;
 		margin-bottom: -51px;
 	}
 }
 .cervezas{
 	grid-area: contenido;
-	margin-top: 2.2rem;
+	margin-top: 2rem;
 	.cervezasCard {
 			border: 1px solid #a8a8a8;
 			border-radius: 15px 100px 15px 15px;
@@ -380,7 +376,7 @@ footer {
 			@include cervezaitem;
 		}
 		.cervezas__items4 {
-			background: url(../img/mixbirra.jpg) no-repeat;
+			background: url(../img/shots.jpg) no-repeat;
 			background-position: right;
 			@include cervezaitem;
 		}
@@ -404,6 +400,7 @@ footer {
 .bannercontactos{
 	grid-area: banner;
 	background-image: url(../img/viva.jpg);
+	background-position: center;
 	@include banner;
 }
 #formcont {
@@ -412,9 +409,8 @@ footer {
 		@include iconopaginas;
 	}
 	h1 {
+		@include titulopaginas;
 		font-size: 34px;
-		text-align: center;
-		margin-top: -10px;
 		margin-bottom: -62px;
 	}
 }
@@ -522,13 +518,13 @@ footer {
 
 /* RESPONSIVE CSS */
 @media (min-width: 375px) {
-/* 	#grid-container {
-		grid-template-rows: 4.5rem 12rem 8.5rem 86.5rem auto;
-	} */
+	#grid-container {
+		grid-template-rows: 4.5rem 9.8rem 10.5rem 85.9rem auto;
+	}
 	/* pag-sucursales */
 	.sucursales .sucursalesCard .direccion {
-		margin-bottom: 1.5rem;
-		margin-top: 1.5rem;
+		margin-bottom: 0.9rem;
+		margin-top: 1.6rem;
 	}
 	#ubicaciones {
 		div {
@@ -544,36 +540,60 @@ footer {
 	.menu{
 		.menuCard{
 			.menu__items1, .menu__items2, .menu__items3, .menu__items4, .menu__items5 {
-				min-height: 106px;
+				min-height: 113px;
 			}
 		}
 	}
-	/* pag-bebidas */
+	/* pag-cervezas */
 	.cervezas{
 		.cervezasCard{
 			.cervezas__items1, .cervezas__items2, .cervezas__items3, .cervezas__items4 {
-				min-height: 174px;
+				min-height: 181px;
 			}
 		}
-	}
-	/* pag-contacto */
-	.final img{
-			margin-bottom: 32px;
 	}
 }
 @media (min-width: 425px) {
-/* 	#grid-container {
-		grid-template-rows: 4.5rem 13rem 8.5rem 87rem auto;
-	} */
+	#grid-container {
+		grid-template-rows: 4.5rem 11rem 11.5rem 86rem auto;
+	}
+	/* pag-index */
+	#horarios {
+		.titulo {
+			font-size: 30px;
+		}
+		.titulos {
+			font-size: 15px;
+
+		}
+		td {
+			font-size: 12px;
+		}
+	}
+	/* pag-sucursales */
+	#locales h1 {
+		font-size: 50px;
+	}
+	#ubicaciones {
+		iframe {
+			height: 93px;
+		}
+	}
 		/* pag-menu */
+		#comida h1 {
+			font-size: 50px;
+		}
 		.menu{
 			.menuCard{
 				.menu__items1, .menu__items2, .menu__items3, .menu__items4, .menu__items5 {
-					min-height: 112px;
+					min-height: 114px;
 				}
 			}
 		}
-		/* pag-bebidas */
+		/* pag-cervezas */
+		#bebidas h1 {
+			font-size: 50px;
+		}
 		.cervezas{
 			.cervezasCard{
 				.cervezas__items1, .cervezas__items2, .cervezas__items3, .cervezas__items4 {
@@ -581,26 +601,37 @@ footer {
 				}
 			}
 		}
+		/* pag-contactos */
+		#formcont h1 {
+			font-size: 39px;
+		}
+		.titulos h2{
+				font-size: 25px;
+				padding: 12px;
+		}
+		#contenidoformulario {
+			height: 835px;
+		}
 }
 @media (min-width: 728px) {
-/* 	#grid-container {
-		grid-template-rows: 5.8rem 25rem 13.5rem 62.7rem auto;
-	} */
+	#grid-container {
+		grid-template-rows: 5.8rem 20rem 13.5rem 62.7rem auto;
+	}
 	/* index-navegacion */
 	.lachoppera {
+		.links{
+			padding-right: 0px;
+		}
 		.lacho {
 			font-size: 45px;
 		}
-		.nave {
-			text-align: right;
-			margin: auto;
-			.solo {
-				font-size: 26px;
-				}
-			.navegacion {
-				font-size: 26px;
-				}
+		.link {
+			justify-content: flex-end;
 		}
+		.nave .navegacion {
+				font-size: 26px;
+				padding: 7px;
+				}
 	}
 	.navbar-light {
 		.navbar-nav {
@@ -608,10 +639,6 @@ footer {
 				color: black;
 			}
 		}
-	}
-	/* carrousel */
-	.carousel {
-		margin-top: 5rem;
 	}
 	/* horarios */
 	#horarios {
@@ -656,10 +683,11 @@ footer {
 		.footerA { 
 			width: 70px;
 			.logofooter {
-			margin-top: 25px;
+			width: 70px;
+			margin-top: 18px;
 			}
 			.redes {
-				gap: 13px;
+				gap: 23px;
 			}
 		}
 		.linea {
@@ -703,15 +731,15 @@ footer {
 				margin-top: 3.5rem;
 				}
 			}
-			}
+		}
 		#ubicaciones {
 			div {
 				margin-top: -24px;
 				margin-bottom: 14px;
 			}
 			iframe {
-				width: 183px;
-				height: 123px;
+				width: 216px;
+				height: 134px;
 			}
 		}
 	/* menu-pag */
@@ -725,8 +753,13 @@ footer {
 	}
 	.menu{
 		.menuCard{
+			h2{
+				padding: 8px;
+				padding-bottom: 10px;
+			
+			}
 			.menu__items1, .menu__items2, .menu__items3, .menu__items4, .menu__items5{
-				min-height: 142px;
+				min-height: 155px;
 			}
 			  .alimento {
 			text-align: left;
@@ -735,6 +768,9 @@ footer {
 		}
 		}
 	/* bebidas -pag */
+	.bannerbebidas{
+		background-position: right;
+	}
 	#bebidas {
 		.ubication img{
 			width: 6rem;
@@ -746,7 +782,7 @@ footer {
 	.cervezas{
 		.cervezasCard{
 			.cervezas__items1, .cervezas__items2, .cervezas__items3, .cervezas__items4 {
-				min-height: 202px;
+				min-height: 213px;
 			}
 			.birra {
 				text-align: center;
@@ -755,6 +791,15 @@ footer {
 		}
 	}
 	/* contacto-pag */
+	#grid-container2 {
+		grid-template-rows: 5.8rem 20rem 13.5rem 52.1rem auto;
+	}
+	#formcont h1{ 
+		font-size: 47px;
+	}
+	.titulos h2{
+		font-size: 30px;
+	}
 	#formulario {
 		.titulos {
 			margin-top: -34px;
@@ -773,25 +818,24 @@ footer {
 	}
 	#contenidoformulario {
 		width: 410px;
-		height: 728px;
+		height: 739px;
 		margin: 17px auto;
-		padding-top: 15px;
+		padding-top: 25px;
 		font-size: 29px;
 		input {
-			width: 290px;
+			width: 316px;
 			height: 43px;
 			padding-left: 3px;
-			margin-bottom: 5px;
 		}
 		textarea {
-			width: 290px;
+			width: 316px;
 			font-size: 20px;
 		}
 		label {
 			padding-right: 34px;
 		}
 		select {
-			width: 183px;
+			width: 205px;
 			height: 45px;
 		}
 		p {
@@ -802,7 +846,7 @@ footer {
 			margin-top: -42px;
 		}
 		.oracion {
-			margin-top: 0px;
+			margin-top: -22px;
 			display: inline-block;
 		}
 	}

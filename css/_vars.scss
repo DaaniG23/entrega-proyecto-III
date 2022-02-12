@@ -46,3 +46,7 @@ $colorTexto2: #a8a8a8;
     background-position: center;
     color:white;
 }
+@mixin titulopaginas {
+    text-align: center;
+	margin-top: -10px;
+}
