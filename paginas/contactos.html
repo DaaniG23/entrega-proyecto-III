@@ -13,10 +13,12 @@
     <!-- letras -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">     
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">  
+    <!-- animaciones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>   
 </head>
 <body>
-<div id="grid-container">
+<div id="grid-container2">
 <header>
   <nav class="navbar navbar-expand-md navbar-light fixed-top lachoppera">
     <div class="container-fluid">
@@ -36,7 +38,7 @@
             <a class="nav-link navegacion" href="./menu.html">Menú</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link navegacion" href="./bebidas.html">Bebidas</a>
+            <a class="nav-link navegacion" href="./cervezas.html">Cervezas</a>
           </li>
           <li class="nav-item">
             <a class="nav-link navegacion" href="./contactos.html">Contacto</a>
@@ -53,7 +55,7 @@
 <article id="formcont"> 
   <div class="px-4 py-5 text-center ubication">
     <img class="d-block mx-auto mb-4" src="../img/formucontacto.png" alt="iconocontactos">
-    <h1 class="display-5 fw-bold text-white textoEncabezado">Formulario de Contacto</h1>
+    <h1 class="display-5 fw-bold text-white textoEncabezado animate__animated animate__backInLeft">Formulario de Contacto</h1>
   </div>
 </article>
 <form action="" method="get"enctype="text">
@@ -81,7 +83,7 @@
                 </section>
         <div class="botones">  
             <!-- Button trigger modal -->
-            <button type="submit" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Enviar</button>
+            <button type="submit" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Enviar</button>
         </div>
             <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -96,7 +98,7 @@
         </div>
         <div class="modal-footer">
           <button type="submit" class="btn btn-dark" data-bs-dismiss="modal">Si, enviarlo</button>
-          <button type="reset" class="btn btn-dark">Borrar todo</button>
+          <button type="reset" class="btn btn-dark" data-bs-dismiss="modal">Borrar todo</button>
         </div>
       </div>
     </div>

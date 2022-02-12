@@ -13,8 +13,8 @@
   overflow: hidden;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 4.5rem 10.5rem 10.5rem 91.7rem auto;
-      grid-template-rows: 4.5rem 10.5rem 10.5rem 91.7rem auto;
+  -ms-grid-rows: 4.5rem 10.5rem 10.5rem 91.5rem auto;
+      grid-template-rows: 4.5rem 10.5rem 10.5rem 91.5rem auto;
       grid-template-areas: "header"  "banner"  "encabezado"  "contenido"  "footer";
 }
 
@@ -224,6 +224,10 @@ footer .footerB a {
   padding-top: 1px;
 }
 
+footer .footerB a:hover {
+  color: tomato;
+}
+
 #footercopyright p {
   font-size: 0.6rem;
   margin-top: 10px;
@@ -363,7 +367,7 @@ footer .footerB a {
 }
 
 .sucursales .sucursalesCard .direccion {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.1rem;
   margin-top: 2.5rem;
 }
 
@@ -393,7 +397,7 @@ footer .footerB a {
 #ubicaciones iframe {
   margin: 5px;
   width: 90px;
-  height: 89px;
+  height: 71px;
 }
 
 /* pag menu */
@@ -631,7 +635,7 @@ footer .footerB a {
   margin: 0px;
   -webkit-transition: .5s;
   transition: .5s;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.78rem;
 }
 
 .cervezas .cervezasCard::before {
@@ -751,6 +755,15 @@ footer .footerB a {
 }
 
 /* pag contacto */
+#grid-container2 {
+  overflow: hidden;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 4.5rem 10.5rem 10.5rem 64.1rem auto;
+      grid-template-rows: 4.5rem 10.5rem 10.5rem 64.1rem auto;
+      grid-template-areas: "header"  "banner"  "encabezado"  "contenido"  "footer";
+}
+
 .bannercontactos {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
@@ -891,15 +904,6 @@ h2 {
 .contenidomodal .cuerpo {
   font-size: 25px;
   text-align: center;
-}
-
-.final img {
-  width: 304px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: auto;
-  margin-bottom: 72px;
 }
 
 /* RESPONSIVE CSS */

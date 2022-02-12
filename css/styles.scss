@@ -12,7 +12,7 @@
 #grid-container {
 	overflow: hidden;
 	display: grid;
-	grid-template-rows: 4.5rem 10.5rem 10.5rem 91.7rem auto;
+	grid-template-rows: 4.5rem 10.5rem 10.5rem 91.5rem auto;
 	grid-template-areas: 
 	"header" 
 	"banner" 
@@ -159,6 +159,9 @@ footer {
 			color: $colorTexto2;
 			padding-top: 1px;
 		}
+		& a:hover{
+			color:tomato;
+		}
 	}
 }
 #footercopyright p {
@@ -224,7 +227,7 @@ footer {
 			font-weight: 1500;
 		}
 		.direccion {
-			margin-bottom: 2.5rem;
+			margin-bottom: 2.1rem;
 			margin-top: 2.5rem;
 		h2 {
 			text-align: center;
@@ -244,7 +247,7 @@ footer {
 	iframe {
 		margin: 5px;
 		width: 90px;
-		height: 89px;
+		height: 71px;
 	}
 }
 /* pag menu */
@@ -351,7 +354,7 @@ footer {
 			overflow: hidden;
 			margin: 0px;
 			transition: .5s;
-			margin-bottom: 2.5rem;
+			margin-bottom: 1.78rem;
 		&::before {
 			position: absolute;
 			transition: .5s;
@@ -387,6 +390,17 @@ footer {
 	}
 }
 /* pag contacto */
+#grid-container2 {
+	overflow: hidden;
+	display: grid;
+	grid-template-rows: 4.5rem 10.5rem 10.5rem 64.1rem auto;
+	grid-template-areas: 
+	"header" 
+	"banner" 
+	"encabezado" 
+	"contenido" 
+	"footer";
+}
 .bannercontactos{
 	grid-area: banner;
 	background-image: url(../img/viva.jpg);
@@ -505,14 +519,7 @@ footer {
 		text-align: center;
 	}
 }
-.final {
-	img {
-		width: 304px;
-		display: flex;
-		margin: auto;
-		margin-bottom: 72px;
-	}
-}
+
 /* RESPONSIVE CSS */
 @media (min-width: 375px) {
 /* 	#grid-container {
