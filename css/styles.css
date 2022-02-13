@@ -58,11 +58,20 @@ header {
   text-decoration: overline;
 }
 
+.carousel-item {
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+}
+
 .carousel {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: banner;
   margin-bottom: 1rem;
+  -webkit-transform: .3s;
+          transform: .3s;
 }
 
 body {
@@ -124,6 +133,23 @@ body {
   text-align: center;
 }
 
+.lugar:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.lugar::before {
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.lugar::after {
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
 .lugar img {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -131,6 +157,23 @@ body {
   width: 300px;
   height: auto;
   margin: auto;
+}
+
+.lugares:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.lugares::before {
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.lugares::after {
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .lugares img {
@@ -241,10 +284,13 @@ footer .footerB a:hover {
   background-image: url(../img/pizarra.jpg);
   background-size: cover;
   min-height: 100%;
+  margin-top: 0px;
 }
 
 #locales {
-  grid-area: horarios;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: encabezado;
 }
 
 #locales .ubication img {
@@ -401,14 +447,19 @@ footer .footerB a:hover {
 
 /* pag menu */
 .bannermenu {
-  grid-area: carrousel;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: banner;
   background-image: url(../img/promocomida.jpg);
   background-size: cover;
   min-height: 100%;
+  margin-top: 0px;
 }
 
 #comida {
-  grid-area: horarios;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: encabezado;
 }
 
 #comida .ubication img {
@@ -597,14 +648,19 @@ footer .footerB a:hover {
 
 /* pag cervezas */
 .bannerbebidas {
-  grid-area: carrousel;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: banner;
   background-image: url(../img/vaasocerveza.jpg);
   background-size: cover;
   min-height: 100%;
+  margin-top: 0px;
 }
 
 #bebidas {
-  grid-area: horarios;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: encabezado;
 }
 
 #bebidas .ubication img {
@@ -771,6 +827,7 @@ footer .footerB a:hover {
   background-position: center;
   background-size: cover;
   min-height: 100%;
+  margin-top: 0px;
 }
 
 #formcont {
@@ -797,7 +854,7 @@ footer .footerB a:hover {
   margin-top: 48px;
 }
 
-h2 {
+.titulos h2 {
   font-size: 22px;
   padding-bottom: 12px;
 }
@@ -907,6 +964,20 @@ h2 {
 }
 
 /* RESPONSIVE CSS */
+@media (min-width: 342px) {
+  #grid-container {
+    -ms-grid-rows: 4.5rem 8.5rem 9.5rem 91.3rem auto;
+        grid-template-rows: 4.5rem 8.5rem 9.5rem 91.3rem auto;
+  }
+}
+
+@media (min-width: 360px) {
+  #grid-container {
+    -ms-grid-rows: 4.5rem 9.8rem 6.5rem 91.3rem auto;
+        grid-template-rows: 4.5rem 9.8rem 6.5rem 91.3rem auto;
+  }
+}
+
 @media (min-width: 375px) {
   #grid-container {
     -ms-grid-rows: 4.5rem 9.8rem 10.5rem 85.9rem auto;
@@ -932,6 +1003,13 @@ h2 {
   /* pag-cervezas */
   .cervezas .cervezasCard .cervezas__items1, .cervezas .cervezasCard .cervezas__items2, .cervezas .cervezasCard .cervezas__items3, .cervezas .cervezasCard .cervezas__items4 {
     min-height: 181px;
+  }
+}
+
+@media (min-width: 399px) {
+  #grid-container {
+    -ms-grid-rows: 4.5rem 9.8rem 11.3rem 85.9rem auto;
+        grid-template-rows: 4.5rem 9.8rem 11.3rem 85.9rem auto;
   }
 }
 
@@ -984,7 +1062,35 @@ h2 {
   }
 }
 
-@media (min-width: 728px) {
+@media (min-width: 439px) {
+  #grid-container {
+    -ms-grid-rows: 4.5rem 11rem 10.1rem 86rem auto;
+        grid-template-rows: 4.5rem 11rem 10.1rem 86rem auto;
+  }
+}
+
+@media (min-width: 609px) {
+  #grid-container {
+    -ms-grid-rows: 4.5rem 11rem 12.1rem 86rem auto;
+        grid-template-rows: 4.5rem 11rem 12.1rem 86rem auto;
+  }
+}
+
+@media (min-width: 667px) {
+  #grid-container {
+    -ms-grid-rows: 4.5rem 11rem 14.1rem 86rem auto;
+        grid-template-rows: 4.5rem 11rem 14.1rem 86rem auto;
+  }
+}
+
+@media (min-width: 744px) {
+  #grid-container {
+    -ms-grid-rows: 4.5rem 11rem 16.1rem 86rem auto;
+        grid-template-rows: 4.5rem 11rem 16.1rem 86rem auto;
+  }
+}
+
+@media (min-width: 768px) {
   #grid-container {
     -ms-grid-rows: 5.8rem 20rem 13.5rem 62.7rem auto;
         grid-template-rows: 5.8rem 20rem 13.5rem 62.7rem auto;
@@ -1208,10 +1314,31 @@ h2 {
   }
 }
 
+@media (min-width: 808px) {
+  #grid-container {
+    -ms-grid-rows: 5.8rem 20rem 13.5rem 64.7rem auto;
+        grid-template-rows: 5.8rem 20rem 13.5rem 64.7rem auto;
+  }
+}
+
+@media (min-width: 880px) {
+  #grid-container {
+    -ms-grid-rows: 5.8rem 20rem 13.5rem 66.7rem auto;
+        grid-template-rows: 5.8rem 20rem 13.5rem 66.7rem auto;
+  }
+}
+
+@media (min-width: 964px) {
+  #grid-container {
+    -ms-grid-rows: 5.8rem 20rem 13.5rem 69.7rem auto;
+        grid-template-rows: 5.8rem 20rem 13.5rem 69.7rem auto;
+  }
+}
+
 @media (min-width: 1024px) {
   #grid-container {
-    -ms-grid-rows: 6.8rem 27rem 18.2rem 61.5rem auto;
-        grid-template-rows: 6.8rem 27rem 18.2rem 61.5rem auto;
+    -ms-grid-rows: 6.3rem 27rem 18.2rem 61.8rem auto;
+        grid-template-rows: 6.3rem 27rem 18.2rem 61.8rem auto;
   }
   .lachoppera .lacho {
     font-size: 50px;
@@ -1263,7 +1390,7 @@ h2 {
     font-size: 45px;
   }
   .sucursales .sucursalesCard .sucursales__items1, .sucursales .sucursalesCard .sucursales__items2, .sucursales .sucursalesCard .sucursales__items3 {
-    min-height: 208px;
+    min-height: 237px;
   }
   .sucursales .sucursalesCard .direccion {
     margin-top: 3.5rem;
@@ -1297,12 +1424,12 @@ h2 {
     margin-bottom: -30px;
   }
   .cervezas .cervezasCard .cervezas__items1, .cervezas .cervezasCard .cervezas__items2, .cervezas .cervezasCard .cervezas__items3, .cervezas .cervezasCard .cervezas__items4 {
-    min-height: 210px;
+    min-height: 213px;
   }
   /* contactos-pag */
   #grid-container2 {
-    -ms-grid-rows: 6.8rem 27rem 18.2rem 52.1rem auto;
-        grid-template-rows: 6.8rem 27rem 18.2rem 52.1rem auto;
+    -ms-grid-rows: 6.3rem 27rem 18.2rem 52.1rem auto;
+        grid-template-rows: 6.3rem 27rem 18.2rem 52.1rem auto;
   }
   #formcont .ubication img {
     width: 8rem;
@@ -1319,9 +1446,59 @@ h2 {
   }
 }
 
-/* @media (min-width: 1440px) {
-	#grid-container {
-		grid-template-rows: 7rem 42.3rem 15rem 63.5rem auto;
-	} 
-} */
+@media (min-width: 1072px) {
+  #grid-container {
+    -ms-grid-rows: 6.3rem 27rem 18.2rem 64.8rem auto;
+        grid-template-rows: 6.3rem 27rem 18.2rem 64.8rem auto;
+  }
+}
+
+@media (min-width: 1187px) {
+  #grid-container {
+    -ms-grid-rows: 6.3rem 27rem 18.2rem 67.8rem auto;
+        grid-template-rows: 6.3rem 27rem 18.2rem 67.8rem auto;
+  }
+}
+
+@media (min-width: 1353px) {
+  #grid-container {
+    -ms-grid-rows: 6.3rem 35.3rem 18rem 63.5rem auto;
+        grid-template-rows: 6.3rem 35.3rem 18rem 63.5rem auto;
+  }
+  /* sucursales-pag */
+  .sucursales .sucursalesCard .sucursales__items1, .sucursales .sucursalesCard .sucursales__items2, .sucursales .sucursalesCard .sucursales__items3 {
+    min-height: 234px;
+  }
+  /* menu-pag */
+  .menu .menuCard .menu__items1, .menu .menuCard .menu__items2, .menu .menuCard .menu__items3, .menu .menuCard .menu__items4, .menu .menuCard .menu__items5 {
+    min-height: 134px;
+  }
+  /* cervezas -pag */
+  .cervezas .cervezasCard .cervezas__items1, .cervezas .cervezasCard .cervezas__items2, .cervezas .cervezasCard .cervezas__items3, .cervezas .cervezasCard .cervezas__items4 {
+    min-height: 211px;
+  }
+  /* contactos-pag */
+  #grid-container2 {
+    -ms-grid-rows: 6.3rem 27rem 18.2rem 54.1rem auto;
+        grid-template-rows: 6.3rem 27rem 18.2rem 54.1rem auto;
+  }
+  #contenidoformulario {
+    height: 744px;
+    margin-bottom: 41px;
+  }
+}
+
+@media (min-width: 1366px) {
+  #grid-container {
+    -ms-grid-rows: 6.3rem 35.3rem 16rem 63.5rem auto;
+        grid-template-rows: 6.3rem 35.3rem 16rem 63.5rem auto;
+  }
+}
+
+@media (min-width: 1440px) {
+  #grid-container {
+    -ms-grid-rows: 6.3rem 37.3rem 18rem 61.5rem auto;
+        grid-template-rows: 6.3rem 37.3rem 18rem 61.5rem auto;
+  }
+}
 /*# sourceMappingURL=styles.css.map */

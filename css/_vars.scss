@@ -34,6 +34,7 @@ $colorTexto2: #a8a8a8;
 @mixin banner {
     background-size: cover;
 	min-height: 100%;
+    margin-top: 0px;
 }
 @mixin cervezaitem {
     min-height: 190px;
