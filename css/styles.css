@@ -650,6 +650,7 @@ footer .footerB a:hover {
   background-size: cover;
   min-height: 100%;
   margin-top: 0px;
+  background-position: center;
 }
 
 #bebidas {

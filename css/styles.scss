@@ -350,6 +350,7 @@ footer {
 	grid-area: banner;
 	background-image: url(../img/vaasocerveza.jpg);
 	@include banner;
+	background-position: center;
 }
 #bebidas {
 	grid-area: encabezado;
