@@ -5,7 +5,7 @@ $colorTexto: black;
 $colorTexto2: #a8a8a8;
 
 @mixin sucursalesitem {
-    min-height: 196px;
+    min-height: 209px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -21,7 +21,7 @@ $colorTexto2: #a8a8a8;
 		height: auto;
 }
 @mixin menuitem {
-        min-height: 120px;
+        min-height: 121px;
         filter: scale(1.05);
         display: flex;
         flex-direction: row;
@@ -37,7 +37,7 @@ $colorTexto2: #a8a8a8;
     margin-top: 0px;
 }
 @mixin cervezaitem {
-    min-height: 190px;
+    min-height: 203px;
     filter: scale(1.05);
     display: flex;
     flex-direction: row;

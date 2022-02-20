@@ -12,7 +12,7 @@
 #grid-container {
 	overflow: hidden;
 	display: grid;
-	grid-template-rows: 4.5rem 8.5rem 10.5rem 91.3rem auto;
+	grid-template-rows: 4.5rem 8.5rem 10.5rem 90.3rem auto;
 	grid-template-areas: 
 	"header" 
 	"banner" 
@@ -49,13 +49,12 @@ header {
 		}
 	}
 }
-.carousel-item {
-	transition: transform .3s ease-in-out;
-}
-.carousel {
+.carrousel {
 	grid-area: banner;
 	margin-bottom: 1rem;
-	transform: .3s;
+	min-height: 100%;
+    margin-top: 4rem;
+	background-size: cover;
 }
 body {
 	background-color: rgb(15, 14, 12);
@@ -191,11 +190,12 @@ footer {
 		margin-top: 10px;
 		text-align: center;
 	}
-/* pag sucursales */
+/* pag-sucursales */
 .bannersucursales{
 	grid-area: banner;
 	background-image: url(../img/pizarra.jpg);
 	@include banner;
+	background-position: center;
 }
 #locales {
 	grid-area: encabezado;
@@ -270,7 +270,7 @@ footer {
 		height: 71px;
 	}
 }
-/* pag menu */
+/* pag-menu */
 .bannermenu{
 	grid-area: banner;
 	background-image: url(../img/promocomida.jpg);
@@ -345,7 +345,7 @@ footer {
 		}
 	}
 }
-/* pag cervezas */
+/* pag-cervezas */
 .bannerbebidas{
 	grid-area: banner;
 	background-image: url(../img/vaasocerveza.jpg);
@@ -406,7 +406,7 @@ footer {
 		}
 	}
 }
-/* pag contacto */
+/* pag-contacto*/
 #grid-container2 {
 	overflow: hidden;
 	display: grid;
@@ -523,6 +523,8 @@ footer {
 		margin-bottom: 12px;
 		margin-left: 5px;
 		margin-top: 39px;
+		background-color: whitesmoke;
+		border: 2px solid rgb(15, 14, 12);
 	}
 }
 .contenidomodal {
@@ -538,24 +540,15 @@ footer {
 }
 
 /* RESPONSIVE CSS */
-@media (min-width: 342px) {
-	#grid-container {
-		grid-template-rows: 4.5rem 8.5rem 9.5rem 91.3rem auto;
-	}
-}
-@media (min-width: 360px) {
-	#grid-container {
-		grid-template-rows: 4.5rem 9.8rem 6.5rem 91.3rem auto;
-	}
-}
+
 @media (min-width: 375px) {
 	#grid-container {
-		grid-template-rows: 4.5rem 9.8rem 10.5rem 85.9rem auto;
+		grid-template-rows: 4.5rem 9.8rem 10.5rem 83.3rem auto;
 	}
 	/* pag-sucursales */
 	.sucursales .sucursalesCard .direccion {
-		margin-bottom: 0.9rem;
-		margin-top: 1.6rem;
+		margin-bottom: 0.5rem;
+		margin-top: 1.4rem;
 	}
 	#ubicaciones {
 		div {
@@ -571,7 +564,7 @@ footer {
 	.menu{
 		.menuCard{
 			.menu__items1, .menu__items2, .menu__items3, .menu__items4, .menu__items5 {
-				min-height: 113px;
+				min-height: 115px;
 			}
 		}
 	}
@@ -584,14 +577,9 @@ footer {
 		}
 	}
 }
-@media (min-width: 399px) {
-	#grid-container {
-		grid-template-rows: 4.5rem 9.8rem 11.3rem 85.9rem auto;
-	}
-}
 @media (min-width: 425px) {
 	#grid-container {
-		grid-template-rows: 4.5rem 11rem 11.5rem 86rem auto;
+		grid-template-rows: 4.5rem 11rem 11.5rem 83.5rem auto;
 	}
 	/* pag-index */
 	#horarios {
@@ -614,58 +602,76 @@ footer {
 			height: 93px;
 		}
 	}
-		/* pag-menu */
-		#comida h1 {
-			font-size: 50px;
-		}
-		.menu{
-			.menuCard{
-				.menu__items1, .menu__items2, .menu__items3, .menu__items4, .menu__items5 {
-					min-height: 114px;
-				}
+	/* pag-menu */
+	#comida h1 {
+		font-size: 50px;
+	}
+	.menu{
+		.menuCard{
+			.menu__items1, .menu__items2, .menu__items3, .menu__items4, .menu__items5 {
+				min-height: 121px;
 			}
 		}
-		/* pag-cervezas */
-		#bebidas h1 {
-			font-size: 50px;
-		}
-		.cervezas{
-			.cervezasCard{
-				.cervezas__items1, .cervezas__items2, .cervezas__items3, .cervezas__items4 {
-					min-height: 182px;
-				}
+	}
+	/* pag-cervezas */
+	#bebidas h1 {
+		font-size: 50px;
+	}
+	.cervezas{
+		.cervezasCard{
+			.cervezas__items1, .cervezas__items2, .cervezas__items3, .cervezas__items4 {
+				min-height: 188px;
 			}
 		}
-		/* pag-contactos */
-		#formcont h1 {
-			font-size: 39px;
-		}
-		.titulos h2{
-				font-size: 25px;
-				padding: 12px;
-		}
-		#contenidoformulario {
-			height: 835px;
-		}
+	}
+	/* pag-contactos */
+	#formcont h1 {
+		font-size: 39px;
+	}
+	.titulos h2{
+			font-size: 25px;
+			padding: 12px;
+	}
+	#contenidoformulario {
+		height: 835px;
+	}
 }
-@media (min-width: 439px) {
+@media (min-width: 537px) {
 	#grid-container {
 		grid-template-rows: 4.5rem 11rem 10.1rem 86rem auto;
 	}
-}
-@media (min-width: 609px) {
-	#grid-container {
-		grid-template-rows: 4.5rem 11rem 12.1rem 86rem auto;
+	footer {
+	margin-top: 10px;
+		.footerA { 
+			width: 70px;
+				.logofooter {
+					width: 70px;
+					margin-top: 18px;
+				}
+				.redes {
+					gap: 23px;
+				}
+		}
+		.linea {
+			border-right:  1px solid #6c757d;
+			height: 6rem;
+		}
+		.footerB { 
+			margin-top: 18px;
+		}
+		.footerC {
+			margin-bottom: 0px;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-evenly;
+			align-items: center;
+			flex-wrap: nowrap;
+		}
 	}
-}
-@media (min-width: 667px) {
-	#grid-container {
-		grid-template-rows: 4.5rem 11rem 14.1rem 86rem auto;
-	}
-}
-@media (min-width: 744px) {
-	#grid-container {
-		grid-template-rows: 4.5rem 11rem 16.1rem 86rem auto;
+	#footercopyright p{
+		font-size: 0.6rem;
+		margin-top: 10px;
+		text-align: center;
 	}
 }
 @media (min-width: 768px) {
@@ -726,48 +732,15 @@ footer {
 			padding-right: 30px;
 		}
 	}
-	footer {
-		margin-top: 10px;
-		.footerA { 
-			width: 70px;
-				.logofooter {
-					width: 70px;
-					margin-top: 18px;
-				}
-				.redes {
-					gap: 23px;
-				}
+	/* pag-sucursales */
+	#locales {
+		.ubication img{
+			width: 6rem;
 		}
-		.linea {
-			border-right:  1px solid #6c757d;
-			height: 6rem;
-		}
-		.footerB { 
-			margin-top: 18px;
-		}
-		.footerC {
-			margin-bottom: 0px;
-			display: flex;
-			flex-direction: row;
-			justify-content: space-evenly;
-			align-items: center;
-			flex-wrap: nowrap;
+		h1 {
+			font-size: 47px;
 		}
 	}
-	#footercopyright p{
-		font-size: 0.6rem;
-		margin-top: 10px;
-		text-align: center;
-	}
-	/* sucursales-pag */
-		#locales {
-			.ubication img{
-				width: 6rem;
-			}
-			h1 {
-				font-size: 47px;
-			}
-		}
 		.sucursales{
 			.sucursalesCard{
 				.sucursales__items1, .sucursales__items2, .sucursales__items3 {
@@ -789,7 +762,7 @@ footer {
 				height: 134px;
 			}
 		}
-	/* menu-pag */
+	/* pag-menu */
 	#comida {
 		.ubication img{
 			width: 6rem;
@@ -801,12 +774,8 @@ footer {
 	.menu {
 		.menuCard {
 			h2{
-				padding: 8px;
-				padding-bottom: 10px;
-			
-			}
-			.menu__items1, .menu__items2, .menu__items3, .menu__items4, .menu__items5 {
-				min-height: 155px;
+				padding: 2px;
+				padding-bottom: 11px;
 			}
 			.alimento {
 				text-align: left;
@@ -814,7 +783,7 @@ footer {
 			}
 		}
 	}
-	/* bebidas -pag */
+	/* pag-cervezas */
 	.bannerbebidas{
 		background-position: right;
 	}
@@ -837,7 +806,7 @@ footer {
 			}
 		}
 	}
-	/* contacto-pag */
+	/* pag-contacto */
 	#grid-container2 {
 		grid-template-rows: 5.8rem 20rem 13.5rem 52.1rem auto;
 	}
@@ -914,24 +883,51 @@ footer {
 		}
 	}
 }
-@media (min-width: 808px) {
+@media (min-width: 977px) {
 	#grid-container {
-		grid-template-rows: 5.8rem 20rem 13.5rem 64.7rem auto;
+		grid-template-rows: 5.8rem 20rem 13.5rem 66.3rem auto;
+	}
+	/* pag-sucursales */
+	.sucursales{
+		.sucursalesCard{
+			.sucursales__items1, .sucursales__items2, .sucursales__items3 {
+				min-height: 244px;
+			}
+		}
+	}
+	/* pag-cervezas */
+	.cervezas {
+		.cervezasCard {
+			.cervezas__items1, .cervezas__items2, .cervezas__items3, .cervezas__items4 {
+				min-height: 227px;
+			}
+		}
 	}
 }
-@media (min-width: 880px) {
+@media (min-width: 992px) {
 	#grid-container {
-		grid-template-rows: 5.8rem 20rem 13.5rem 66.7rem auto;
+		grid-template-rows: 5.8rem 20rem 13.5rem 62.3rem auto;
 	}
-}
-@media (min-width: 964px) {
-	#grid-container {
-		grid-template-rows: 5.8rem 20rem 13.5rem 69.7rem auto;
-	}
+		/* pag-sucursales*/
+		.sucursales{
+			.sucursalesCard{
+				.sucursales__items1, .sucursales__items2, .sucursales__items3 {
+					min-height: 223px;
+				}
+			}
+		}
+		/* pag-cervezas */
+		.cervezas {
+			.cervezasCard {
+				.cervezas__items1, .cervezas__items2, .cervezas__items3, .cervezas__items4 {
+					min-height: 211px;
+				}
+			}
+		}
 }
 @media (min-width: 1024px) {
 	#grid-container {
-		grid-template-rows: 6.3rem 27rem 18.2rem 61.8rem auto;
+		grid-template-rows: 6.3rem 27rem 18.2rem 58.9rem auto;
 	}
 	.lachoppera {
 		.lacho {
@@ -978,7 +974,7 @@ footer {
 			font-size: 18px;
 		}
 	}
-		/* sucursales-pag */
+	/* pag-sucursales */
 		#locales {
 			.ubication img {
 				width: 8rem;
@@ -993,7 +989,7 @@ footer {
 					font-size: 45px;
 				}
 				.sucursales__items1, .sucursales__items2, .sucursales__items3 {
-					min-height: 237px;
+					min-height: 222px;
 				}
 				.direccion {
 				margin-top: 3.5rem;
@@ -1007,7 +1003,7 @@ footer {
 				height: 116px;
 			}
 		}
-		/* menu-pag */
+	/* pag-menu */
 		#comida {
 			.ubication img {
 				width: 8rem;
@@ -1028,7 +1024,7 @@ footer {
 				}
 			}
 		}
-		/* cervezas -pag */
+	/* pag-cervezas */
 		#bebidas {
 			.ubication img {
 				width: 8rem;
@@ -1041,11 +1037,11 @@ footer {
 			.cervezas {
 				.cervezasCard {
 					.cervezas__items1, .cervezas__items2, .cervezas__items3, .cervezas__items4 {
-						min-height: 213px;
+						min-height: 201px;
 					}
 				}
 			}
-		/* contactos-pag */
+	/* pag-contactos */
 		#grid-container2 {
 			grid-template-rows: 6.3rem 27rem 18.2rem 52.1rem auto;
 		}
@@ -1065,29 +1061,19 @@ footer {
 			margin-left: 12px;
 		}
 }
-@media (min-width: 1072px) {
+@media (min-width: 1366px) {
 	#grid-container {
-		grid-template-rows: 6.3rem 27rem 18.2rem 64.8rem auto;
-	}
-}
-@media (min-width: 1187px) {
-	#grid-container {
-		grid-template-rows: 6.3rem 27rem 18.2rem 67.8rem auto;
-	}
-}
-@media (min-width: 1353px) {
-	#grid-container {
-		grid-template-rows: 6.3rem 35.3rem 18rem 63.5rem auto;
+		grid-template-rows: 6.3rem 35.3rem 16rem 61.5rem auto;
 	} 
-	/* sucursales-pag */
+	/* pag-sucursales */
 	.sucursales {
-	 .sucursalesCard {
-		.sucursales__items1, .sucursales__items2, .sucursales__items3 {
-				min-height: 234px;
+	 	.sucursalesCard {
+			.sucursales__items1, .sucursales__items2, .sucursales__items3 {
+				min-height: 225px;
 			}
 		}
 	}
-	/* menu-pag */
+	/* pag-menu */
 	.menu {
 		.menuCard {
 			.menu__items1, .menu__items2, .menu__items3, .menu__items4, .menu__items5 {
@@ -1095,30 +1081,25 @@ footer {
 			}
 		}
 	}
-		/* cervezas -pag */
-			.cervezas {
-				.cervezasCard {
-					.cervezas__items1, .cervezas__items2, .cervezas__items3, .cervezas__items4 {
-						min-height: 211px;
-					}
-				}
+	/* pag-cervezas */
+	.cervezas {
+		.cervezasCard {
+			.cervezas__items1, .cervezas__items2, .cervezas__items3, .cervezas__items4 {
+				min-height: 203px;
 			}
-			/* contactos-pag */
-			#grid-container2 {
-				grid-template-rows: 6.3rem 27rem 18.2rem 54.1rem auto;
-			}
-			#contenidoformulario{
-				height: 744px;
-				margin-bottom: 41px;
-			}
-}
-@media (min-width: 1366px) {
-	#grid-container {
-		grid-template-rows: 6.3rem 35.3rem 16rem 63.5rem auto;
-	} 
+		}
+	}
+	/* pag-contactos */
+	#grid-container2 {
+			grid-template-rows: 6.3rem 27rem 18.2rem 54.1rem auto;
+	}
+	#contenidoformulario{
+		height: 744px;
+		margin-bottom: 41px;
+		}
 }
 @media (min-width: 1440px) {
 	#grid-container {
-		grid-template-rows: 6.3rem 37.3rem 18rem 61.5rem auto;
+		grid-template-rows: 6.3rem 37.3rem 18rem 59.5rem auto;
 	} 
 }
